@@ -46,30 +46,14 @@
             var s = $(window).scrollTop(),
                     d = $(document).height(),
                     c = $(window).height();
-            scrollPercent = (s / (d-c)) * 100;
+            scrollPercent = (s / (d - c)) * 100;
             var position = scrollPercent;
 
-            $("#scroll-progress").css('width', position+'%');
+            $("#scroll-progress").css('width', position + '%');
         });
     </script>
-
-
 </head>
 <body ng-controller="MainController" layout="row">
-
-<img src="img/android.png" id="android-img" style="visibility: hidden; display: none;"/>
-<img src="img/file-pdf.png" id="file-pdf-img" style="visibility: hidden; display: none;"/>
-<img src="img/flag-checkered.png" id="flag-checkered-img" style="visibility: hidden; display: none;"/>
-<img src="img/gamepad-variant.png" id="gamepad-variant-img" style="visibility: hidden; display: none;"/>
-<img src="img/google-play.png" id="google-play-img" style="visibility: hidden; display: none;"/>
-<img src="img/link.png" id="link-img" style="visibility: hidden; display: none;"/>
-<img src="img/lynda.jpg" id="lynda-img" style="visibility: hidden; display: none;"/>
-<img src="img/presentation.png" id="presentation-img" style="visibility: hidden; display: none;"/>
-<img src="img/udacity.png" id="udacity-img" style="visibility: hidden; display: none;"/>
-<img src="img/vogella.png" id="vogella-img" style="visibility: hidden; display: none;"/>
-<img src="img/wiki.png" id="wiki-img" style="visibility: hidden; display: none;"/>
-<img src="img/youtube-play.png" id="youtube-play-img" style="visibility: hidden; display: none;"/>
-
 <div id="toolbar-container">
 
     <nav id="toolbar">
@@ -78,7 +62,8 @@
         </div>
         <div class="nav-wrapper">
             <img id="toolbar-logo" src="/img/source-fork.png">
-            <a href="#"  class="brand-logo left"><span style="font-weight: 400;">crowd</span><span style="font-weight: 300;">path</span></a>
+            <a href="#" class="brand-logo left"><span style="font-weight: 400;">crowd</span><span
+                    style="font-weight: 300;">path</span></a>
 
         </div>
     </nav>
@@ -91,6 +76,7 @@
     <div id="card-container-wrapper">
         <div class="statistics-card card card-sizing" id="stats-card">
             <img class="card-image" src="img/Android1.png"/>
+
             <div class="card-content">
                 <div class="statistics-card-title">Android: From Zero to Hero</div>
 
@@ -101,7 +87,7 @@
                 <span class="statistics-item"><i class="statistics-icon mdi-communication-call-split"></i><span
                         class="statistics-text">{{::numberAlternativePaths}}</span></span>
                 <!--<span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span-->
-                        <!--class="statistics-text">{{::pathRating}}</span></span>-->
+                <!--class="statistics-text">{{::pathRating}}</span></span>-->
                 <span class="starrating-wrapper">
                     <span class="starrating statistics-icon mdi-action-star-rate"></span>
                     <span class="starrating statistics-icon mdi-action-star-rate"></span>
@@ -131,14 +117,17 @@
 
             <div class="card-content">
 
-                <p style="margin-top: 10px" class="card-content-text">I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                <p style="margin-top: 10px" class="card-content-text">I am a very simple card. I am good at containing
+                    small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am
+                    good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am
+                    good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.</p>
             </div>
             <div class="card-action">
-                <p >
-                    <input type="checkbox" id="card-action-complete" checked="checked" />
+                <p>
+                    <input type="checkbox" id="card-action-complete" checked="checked"/>
                     <label class="card-action-complete-label" for="card-action-complete">Completed</label>
                 </p>
 
@@ -160,19 +149,24 @@
             <div class="card-content">
 
                 <div class="video-container no-controls">
-                    <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1"
+                            frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p style="margin-top: 10px" class="card-content-text">A material metaphor is the unifying theory of a rationalized space and a system of motion. The material is grounded in tactile reality, inspired by the study of paper and ink, yet technologically advanced and open to imagination and magic. More Information on the <a href="http://www.google.com/design/spec/material-design/introduction.html">Material Design Website</a></p>
+                <p style="margin-top: 10px" class="card-content-text">A material metaphor is the unifying theory of a
+                    rationalized space and a system of motion. The material is grounded in tactile reality, inspired by
+                    the study of paper and ink, yet technologically advanced and open to imagination and magic. More
+                    Information on the <a href="http://www.google.com/design/spec/material-design/introduction.html">Material
+                        Design Website</a></p>
             </div>
 
             <div class="card-action">
-                <p >
-                    <input type="checkbox" id="card-action-complete" checked="checked" />
+                <p>
+                    <input type="checkbox" id="card-action-complete" checked="checked"/>
                     <label class="card-action-complete-label" for="card-action-complete">Completed</label>
                 </p>
 
+            </div>
         </div>
-    </div>
 
         <div class="card card-sizing" id="card-1">
             <div class="card-header">
@@ -187,15 +181,19 @@
             </div>
 
             <div class="card-content">
-                <script async class="speakerdeck-embed" data-id="8389fd60a0e50130aa8066f78f5cbceb" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-                <p style="margin-top: 10px" class="card-content-text">I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                <script async class="speakerdeck-embed" data-id="8389fd60a0e50130aa8066f78f5cbceb"
+                        data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+                <p style="margin-top: 10px" class="card-content-text">I am a very simple card. I am good at containing
+                    small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am
+                    good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am
+                    good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.</p>
             </div>
             <div class="card-action">
-                <p >
-                    <input type="checkbox" id="card-action-complete" checked="checked" />
+                <p>
+                    <input type="checkbox" id="card-action-complete" checked="checked"/>
                     <label class="card-action-complete-label" for="card-action-complete">Completed</label>
                 </p>
 
@@ -203,20 +201,20 @@
         </div>
 
         <ul class="collapsible popout card-sizing" data-collapsible="accordion">
-        <li>
-            <div class="collapsible-header active"><i class="mdi-image-filter-drama"></i>First</div>
-            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-        </li>
-        <li>
-            <div class="collapsible-header"><i class="mdi-maps-place"></i>Second</div>
-            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-        </li>
-        <li>
-            <div class="collapsible-header"><i class="mdi-social-whatshot"></i>Third</div>
-            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-        </li>
-    </ul>
-</div>
+            <li>
+                <div class="collapsible-header active"><i class="mdi-image-filter-drama"></i>First</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="mdi-maps-place"></i>Second</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="mdi-social-whatshot"></i>Third</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+        </ul>
+    </div>
 
     <div class="fixed-action-btn" style="bottom: 32px; right: 32px;">
         <a class="btn-floating btn-large orange accent-4">
@@ -230,15 +228,15 @@
         </ul>
     </div>
 
-<script>
-    $(document).ready(function () {
-        pathgraph.init();
-    });
-</script>
+    <script>
+        $(document).ready(function () {
+            pathgraph.init();
+        });
+    </script>
 
 </body>
 </html>
 
 <!--<script type="text/javascript">$(document).ready(function () {-->
-    <!--$(".card-content-text").shorten({"showChars": 380});-->
+<!--$(".card-content-text").shorten({"showChars": 380});-->
 <!--});</script>-->

@@ -13,37 +13,96 @@
                 dotSize: 18,
                 detailId: "stats-card",
                 message: "Android: From Zero to Hero",
-                image: "flag-checkered-img",
+                image: "img/flag-checkered.png",
                 messageDisplay: true
             }).commit( {
                 dotSize: 18,
                 detailId: "card-1",
                 message: "Android Studio Set-Up",
-                image: "android-img",
+                image: "img/coursera.png",
                 messageDisplay: true
             }).commit({
                 dotSize: 18,
-                message: "Foooo to the bar is the best",
+                message: "Building your first Hello World App",
                 detailId: "card-2",
-                image: "file-pdf-img",
+                image: "img/android.png",
+                messageDisplay: true
+            }).commit({
+                dotSize: 18,
+                message: "Activity Lifecycle - Google IO",
+                detailId: "card-2",
+                image: "img/presentation.png",
+                messageDisplay: true
+            }).commit({
+                dotSize: 18,
+                message: "Rich and Responsive Layouts (Lesson 5)",
+                detailId: "card-2",
+                image: "img/udacity.png",
+                messageDisplay: true
+            })
+            var design = gitgraph.branch("material-design");
+            design.commit({
+                dotSize: 18,
+                message: "Introduction to Material Design",
+                detailId: "card-3",
+                messageDisplay: true,
+                image: "img/youtube-play.png"
+            }).commit({
+                dotSize: 18,
+                message: "Implementing Material Design in your App",
+                detailId: "card-4",
+                messageDisplay: true,
+                image: "img/android.png"
+            });
+            design.merge(master);
+            master.commit({
+                dotSize: 18,
+                message: "Android Debugging",
+                detailId: "card-5",
+                messageDisplay: true,
+                image: "img/vogella.png"
+            }).commit({
+                dotSize: 18,
+                message: "Android Testing",
+                detailId: "card-2",
+                image: "img/presentation.png",
                 messageDisplay: true
             });
-            var develop = gitgraph.branch("develop");
-            develop.commit({
+            var game = gitgraph.branch("game-dev");
+            game.commit({
                 dotSize: 18,
-                message: "Funny texts are funny so am I",
-                detailId: "card-3",
-                messageDisplay: true
-            }).commit({
-                dotSize: 18,
-                message: "I have no idea what to write here so foooo",
-                detailId: "card-4",
+                message: "Chapter 9 - Building the Game",
+                detailId: "card-2",
+                image: "img/file-pdf.png",
                 messageDisplay: true
             });
             master.commit({
                 dotSize: 18,
-                message: "Lorem ipsum dolor sit amet lorem ipsum dolor",
-                detailId: "card-5",
+                message: "Note App 1",
+                detailId: "card-2",
+                image: "img/wiki.png",
+                messageDisplay: true
+            });
+            game.commit({
+                dotSize: 18,
+                message: "Install and Use Android Play Game Services",
+                detailId: "card-2",
+                image: "img/gamepad-variant.png",
+                messageDisplay: true
+            });
+            master.commit({
+                dotSize: 18,
+                message: "Note App 2",
+                detailId: "card-2",
+                image: "img/file-pdf.png",
+                messageDisplay: true
+            });
+            game.merge(master);
+            master.commit({
+                dotSize: 18,
+                message: "How to get rich with Crap - Release your App!",
+                detailId: "card-2",
+                image: "img/google-play.png",
                 messageDisplay: true
             });
 

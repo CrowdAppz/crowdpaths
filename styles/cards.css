@@ -4,3 +4,60 @@
     min-width: 20rem;
     margin: 2.5rem auto;
 }
+
+.card-header {
+    padding: 20px;
+    padding-bottom: 0.4rem;
+    position: relative;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.card-header-avatar {
+    display: inline-block;
+    float: left;
+}
+.card-header-info {
+    display: inline-block;
+    margin-top: 1px;
+}
+.card-header-title {
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #575757;
+    float: left;
+    clear: both;
+}
+
+.card-location {
+    font-weight: 400;
+    font-size: 13px;
+    width: 200px;
+}
+
+.card-body-title {
+    margin-bottom: 0.5rem;
+    line-height: 48px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #a6ece9;
+    font-size: 20px;
+}
+
+.material-avatar {
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    border-radius: 50%;
+    box-sizing: content-box;
+    padding: 8px;
+    background-color: rgba(28, 208, 142, 0.4);
+    border: 1px solid #C7F3E5;
+    box-shadow: 0 0 1px #9D9D9D;
+}

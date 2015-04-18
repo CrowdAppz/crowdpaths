@@ -48,18 +48,42 @@
     </script>
 
 </head>
-<div ng-controller="MainController" layout="row">
-    <!--<canvas id="gitGraph"></canvas>-->
+<body ng-controller="MainController" layout="row">
 
-    <div id="toolbar-container">
-        <nav id="toolbar">
-            <div class="nav-wrapper">
-                <i id="toolbar-logo" class="mdi-communication-call-split"><a href="#"
-                                                                             class="brand-logo left">crowdpaths</a></i>
+<img src="img/wiki.png" id="wiki-img" style="visibility: hidden; display: none;"/>
+
+<div id="toolbar-container">
+    <nav id="toolbar">
+        <div class="nav-wrapper">
+            <i id="toolbar-logo" class="mdi-communication-call-split"><a href="#"
+                                                                         class="brand-logo left">crowdpaths</a></i>
+        </div>
+    </nav>
+</div>
+
+<canvas id="gitGraph"></canvas>
+
+<div id="card-container-wrapper">
+    <div class="statistics-card card">
+        <div class="card-content">
+            <div class="statistics-card-title">Android Tutorial</div>
+                <span class="statistics-item"><i class="statistics-icon mdi-device-access-time"></i> <span
+                        class="statistics-text">{{::durationTime}}</span></span>
+                <span class="statistics-item"><i class="statistics-icon mdi-action-account-child"></i><span
+                        class="statistics-text">{{::usersCompleted}}</span></span>
+                <span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span
+                        class="statistics-text">{{::pathRating}}</span></span>
+                <span class="statistics-item"><i class="statistics-icon mdi-communication-call-split"></i><span
+                        class="statistics-text">{{::numberAlternativePaths}}</span></span>
+
+            <div class="statistics-card-description white-text">Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </div>
-        </nav>
+        </div>
     </div>
-    <div id="card-container-wrapper">
+
         <div class="card">
             <div class="card-header">
                 <div class="card-header-avatar">
@@ -85,6 +109,7 @@
                 </p>
         </div>
     </div>
+</div>
 </div>
 
     <div class="fixed-action-btn" style="bottom: 45px; right: 55px;">

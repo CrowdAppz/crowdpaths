@@ -50,44 +50,23 @@
 </head>
 <body ng-controller="MainController" layout="row">
 
-<img src="img/wiki.png" id="wiki-img" style="visibility: hidden; width: 48px; height: 48px;" />
+<img src="img/wiki.png" id="wiki-img" style="visibility: hidden; display: none;"/>
 
-<!--<nav>-->
-    <!--<div class="nav-wrapper">-->
-        <!--<a href="#" class="brand-logo right">logo</a>-->
-        <!--<ul id="nav-mobile" class="left hide-on-med-and-down">-->
-            <!--<li><a href="sass.html">sass</a></li>-->
-            <!--<li><a href="components.html">components</a></li>-->
-            <!--<li><a href="javascript.html">javascript</a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
-<!--</nav>-->
+<div id="toolbar-container">
+    <nav id="toolbar">
+        <div class="nav-wrapper">
+            <i id="toolbar-logo" class="mdi-communication-call-split"><a href="#"
+                                                                         class="brand-logo left">crowdpaths</a></i>
+        </div>
+    </nav>
+</div>
 
 <canvas id="gitGraph"></canvas>
-<body ng-controller="MainController" layout="row">
-    <canvas id="gitGraph"></canvas>
-<nav>
-    <div class="nav-wrapper">
-        <a href="#" class="brand-logo right">Logo</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="components.html">Components</a></li>
-            <li><a href="javascript.html">JavaScript</a></li>
-        </ul>
-    </div>
-</nav>
-    <div id="toolbar-container">
-        <nav id="toolbar">
-            <div class="nav-wrapper">
-                <i id="toolbar-logo" class="mdi-communication-call-split"><a href="#"
-                                                                             class="brand-logo left">crowdpaths</a></i>
-            </div>
-        </nav>
-    </div>
-    <div id="card-container-wrapper">
-        <div class="statistics-card card">
-            <div class="card-content">
-                <div class="statistics-card-title">Android Tutorial</div>
+
+<div id="card-container-wrapper">
+    <div class="statistics-card card">
+        <div class="card-content">
+            <div class="statistics-card-title">Android Tutorial</div>
                 <span class="statistics-item"><i class="statistics-icon mdi-device-access-time"></i> <span
                         class="statistics-text">{{::durationTime}}</span></span>
                 <span class="statistics-item"><i class="statistics-icon mdi-action-account-child"></i><span
@@ -97,34 +76,34 @@
                 <span class="statistics-item"><i class="statistics-icon mdi-communication-call-split"></i><span
                         class="statistics-text">{{::numberAlternativePaths}}</span></span>
 
-                <div class="statistics-card-description white-text">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <div class="card-header-avatar">
-                    <img src="\img\youtube-play.png" class="material-avatar"></div>
-                <div class="card-header-info">
-                    <span class="card-header-title">This is a cool card</span>
-                    <span class="card-header-title card-location">veryyy nice</span>
-                </div>
-            </div>
-            <div class="card-content">
-                <div class="card-body-title">Android is soo much fund</div>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <a href="#">This is a link</a>
-                <a href='#'>This is a link</a>
+            <div class="statistics-card-description white-text">Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </div>
         </div>
     </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="card-header-avatar">
+                <img src="\img\youtube-play.png" class="material-avatar"></div>
+            <div class="card-header-info">
+                <span class="card-header-title">This is a cool card</span>
+                <span class="card-header-title card-location">veryyy nice</span>
+            </div>
+        </div>
+        <div class="card-content">
+            <div class="card-body-title">Android is soo much fund</div>
+            <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+            <a href="#">This is a link</a>
+            <a href='#'>This is a link</a>
+        </div>
+    </div>
+</div>
 </div>
 
 </body>

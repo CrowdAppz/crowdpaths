@@ -19,6 +19,8 @@ html, body {
     background-color: #01579B;
     witdh: 100%;
     margin-bottom: 2rem;
+    position: fixed;
+    z-index: 100;
 }
 
 #toolbar-container {

@@ -1,10 +1,13 @@
-.card {
+.card-sizing {
     /*min-height: 150px;*/
     max-width: 85rem;
     min-width: 20rem;
     margin: 2.5rem auto;
 }
-
+.progress{
+    height: 3px;
+    margin: 0px;
+}
 .statistics-card {
     background-color: #0288D1; !important;
 }
@@ -39,20 +42,30 @@
 
 .card-header {
     padding: 20px;
-    padding-bottom: 0.4rem;
+    padding-bottom: 0;
     position: relative;
     font-size: 20px;
     vertical-align: middle;
 }
 
+.card-header-title-big {
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #a6ece9;
+    font-size: 20px;
+    float: left;
+    clear: both;
+}
 .card-header-avatar {
     display: inline-block;
     float: left;
+    margin-top: 2px;
 }
 
 .card-header-info {
     display: inline-block;
-    margin-top: 1px;
 }
 
 .card-header-title {
@@ -71,7 +84,11 @@
     font-size: 13px;
     width: 200px;
 }
-
+.card-action {
+    position: relative;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
 .card-body-title {
     margin-bottom: 0.5rem;
     line-height: 48px;
@@ -85,8 +102,8 @@
 
 .material-avatar {
     vertical-align: middle;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     margin-right: 16px;
     border-radius: 50%;
     box-sizing: content-box;
@@ -94,4 +111,28 @@
     background-color: rgba(28, 208, 142, 0.4);
     border: 1px solid #C7F3E5;
     box-shadow: 0 0 1px #9D9D9D;
+}
+.card-footer-button {
+    float: right;
+    line-height: 140%;
+    margin: 0;
+}
+
+.card-action-complete-label {
+    font-size: 1.7rem !important;
+}
+
+.card-action-img {
+    font-size: 2.5rem;
+    color: #737373;
+}
+
+.starrating-wrapper{
+    margin-left: -9px;
+}
+
+.starrating{
+    margin-right: -14px;
+    padding: 0;
+    font-size: 32px;
 }

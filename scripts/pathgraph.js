@@ -5,35 +5,36 @@
         init: function () {
             var gitgraph = new GitGraph({
                 template: "metro",
-                orientation: "vertical"
+                orientation: "vertical",
+                mode: "compact"
             });
 
             var master = gitgraph.branch("master");
             master.commit({
-                dotSize: 28,
+                dotSize: 18,
                 detailId: "stats-card",
                 message: "sc"
             }).commit( {
-                dotSize: 28,
+                dotSize: 18,
                 detailId: "card-1",
                 message: "1"
             }).commit({
-                dotSize: 28,
+                dotSize: 18,
                 message: "2",
                 detailId: "card-2"
             });
             var develop = gitgraph.branch("develop");
             develop.commit({
-                dotSize: 28,
+                dotSize: 18,
                 message: "3",
                 detailId: "card-3"
             }).commit({
-                dotSize: 28,
+                dotSize: 18,
                 message: "4",
                 detailId: "card-4"
             });
             master.commit({
-                dotSize: 28,
+                dotSize: 18,
                 message: "5",
                 detailId: "card-5"
             });

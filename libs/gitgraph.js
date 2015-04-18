@@ -581,16 +581,17 @@
     this.parent.commitOffsetY += this.template.commit.spacingY;
 
     // Add height of detail div (normal vertical mode only)
-    if ( commit.detail !== null ) {
-      var i, c, times;
-      for(i = 0; i < this.parent.commits.length; i++) {
-        c = this.parent.commits[i];
-        if(c.sha1 === commit.sha1) {
-          times = i + 1;
-        }
-      }
-      this.parent.commitOffsetY -= commit.detail.clientHeight + 56 - (50 * times) + (28 * (times+1));
-    }
+    //if ( commit.detail !== null ) {
+    //  var i, c, times;
+    //  for(i = 0; i < this.parent.commits.length; i++) {
+    //    c = this.parent.commits[i];
+    //    if(c.sha1 === commit.sha1) {
+    //      times = i + 1;
+    //    }
+    //  }
+    //  //this.parent.commitOffsetY -= commit.detail.clientHeight + 56 - (50 * times) + (28 * (times+1));
+    //  this.parent.commitOffsetY -= commit.detail.clientHeight - 50;
+    //}
     console.log("commit offset y: " + this.parent.commitOffsetY);
     // Auto-render
     this.parent.render();
@@ -1015,7 +1016,7 @@
           spacingX: 50
         },
         commit: {
-          spacingY: -50,
+          spacingY: -70,
           dot: {
             size: 14
           },

@@ -15,5 +15,54 @@ angular.module('crowdpaths', [])
             console.log("unfocus");
             angular.element(document.getElementById('search-icon')).removeClass("focus");
         }
-    });
+
+
+        $scope.startPageContent = [
+            {
+                "title": "Android Tutorial",
+                "durationTime": "3h 05m",
+                "usersCompleted": "1337",
+                "numberAlternativePaths": "3",
+                "shortDescription": "Lorem Ipsum is simply dummy text of the printing and " +
+                "typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
+                "when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                "imgSrc": "img/Android1.png"
+            },
+            {
+                "title": "Android Tutorial",
+                "durationTime": "3h 05m",
+                "usersCompleted": "1337",
+                "numberAlternativePaths": "3",
+                "shortDescription": "Lorem Ipsum is simply dummy text of the printing and " +
+                "typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
+                "when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                "imgSrc": "img/Android1.png"
+
+            },
+            {
+                "title": "Android Tutorial",
+                "durationTime": "3h 05m",
+                "usersCompleted": "1337",
+                "numberAlternativePaths": "3",
+                "shortDescription": "Lorem Ipsum is simply dummy text of the printing and " +
+                "typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
+                "when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                "imgSrc": "img/Android1.png"
+
+            },
+            {
+                "title": "Android Tutorial",
+                "durationTime": "3h 05m",
+                "usersCompleted": "1337",
+                "numberAlternativePaths": "3",
+                "shortDescription": "Lorem Ipsum is simply dummy text of the printing and " +
+                "typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
+                "when an unknown printer took a foobar of type and scrambled it to make a type specimen book.",
+                "imgSrc": "img/Android1.png"
+
+            }
+        ]
+        ;
+    })
+;
 

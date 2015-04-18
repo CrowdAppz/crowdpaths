@@ -7,16 +7,32 @@
 
 .card-title-link {
     text-decoration: none;
-    color: #FDD835;
+    color: #185F72;
 }
+
+.card-image {
+    height: 213px;
+    float: left;
+    background-color: white;
+    margin-right: 2rem;
+    padding: 10px 10px 10px 10px;
+    background-color: #185F72;
+}
+
 .progress {
     height: 3px;
     margin: 0px;
 }
 
 .statistics-card {
-    background-color: #185F72;
-!important;
+    /*background-color: #185F72;*/
+/*!important;*/
+    background-color: white;
+}
+
+.startpage-statistics-card {
+    background-color: white;
+    margin-bottom: 3rem;
 }
 
 .statistics-card-title {
@@ -26,7 +42,8 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    color: #47FFFB;
+    /*color: #47FFFB;*/
+    color: #185F72;
     font-size: 20px;
 
 }
@@ -35,12 +52,22 @@
     margin-right: 0.2rem;
     font-size: 24px;
     vertical-align: middle;
-    color: #47FFFB;
+    /*color: #47FFFB;*/
+    color: #185F72;
+}
+
+.startpage-statistics-icon {
+    color: #185F72;
 }
 
 .statistics-text {
     margin-right: 2rem;
-    color: #FFFFFF;
+    /*color: #FFFFFF;*/
+    color: black;
+}
+
+.startpage-statistics-text {
+    color: black;
 }
 
 .statistics-card-description {
@@ -60,7 +87,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    color: #a6ece9;
+    color: #185F72;
     font-size: 20px;
     float: left;
     clear: both;
@@ -106,7 +133,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    color: #a6ece9;
+    color: #185F72;
     font-size: 20px;
 }
 
@@ -118,8 +145,8 @@
     border-radius: 50%;
     box-sizing: content-box;
     padding: 8px;
-    background-color: rgba(28, 208, 142, 0.4);
-    border: 1px solid #C7F3E5;
+    background-color: #185F72;
+    border: 1px solid #185F72;
     box-shadow: 0 0 1px #9D9D9D;
 }
 

@@ -16,7 +16,7 @@ html, body {
 }
 
 #toolbar {
-    background-color: #01579B;
+    background-color: #18BDC6;
     witdh: 100%;
     margin-bottom: 2rem;
     position: fixed;
@@ -53,4 +53,10 @@ html, body {
 .graph-canvas {
     float: left;
 
+}
+.determinate {
+    background-color:  #00918A;
+}
+.progress{
+    background-color: #acece6;
 }

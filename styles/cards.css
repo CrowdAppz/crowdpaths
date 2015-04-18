@@ -9,7 +9,7 @@
     margin: 0px;
 }
 .statistics-card {
-    background-color: #0288D1; !important;
+    background-color: #185F72; !important;
 }
 
 .statistics-card-title {
@@ -19,7 +19,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    color: #FDD835;
+    color: #47FFFB;
     font-size: 20px;
 
 }
@@ -28,12 +28,12 @@
     margin-right: 0.2rem;
     font-size: 24px;
     vertical-align: middle;
-    color: #FDD835;
+    color: #47FFFB;
 }
 
 .statistics-text {
     margin-right: 2rem;
-    color: #FDD835;
+    color: #FFFFFF;
 }
 
 .statistics-card-description {

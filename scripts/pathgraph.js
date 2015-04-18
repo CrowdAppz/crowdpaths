@@ -30,13 +30,13 @@
             }).commit({
                 dotSize: 18,
                 message: "Activity Lifecycle - Google IO",
-                detailId: "card-2",
+                detailId: "card-3",
                 image: "img/presentation.png",
                 messageDisplay: true
             }).commit({
                 dotSize: 18,
                 message: "Rich and Responsive Layouts (Lesson 5)",
-                detailId: "card-2",
+                detailId: "card-4",
                 image: "img/udacity.png",
                 messageDisplay: true
             })
@@ -44,7 +44,7 @@
             design.commit({
                 dotSize: 18,
                 message: "Introduction to Material Design",
-                detailId: "card-3",
+                detailId: "card-5",
                 messageDisplay: true,
                 image: "img/youtube-play.png"
             }).commit({

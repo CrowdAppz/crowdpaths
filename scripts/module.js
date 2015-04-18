@@ -1,4 +1,4 @@
-angular.module('praxismarket', ['ngMaterial', 'ngTextTruncate'])
+angular.module('crowdpaths', ['ngMaterial', 'ngTextTruncate'])
     .controller('MainController', function ($scope, dataService, $mdSidenav, $mdMedia, $mdDialog, $window, $log) {
 
     })

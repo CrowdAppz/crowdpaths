@@ -14,3 +14,7 @@ html, body {
     padding: 0;
     overflow-x: hiden;
 }
+
+#toolbar {
+    background-color: #8bc34a;
+}

@@ -125,7 +125,8 @@
                     //console.log("x: " + x + " | y: " + y + " / top: " + top
                     //    + " | bottom: " + bottom + " | left: " + left + " | right: " + right);
                     if ((y > top && y < bottom) && (x > left && x < right )) {
-                        console.log("clicked on commit: " + commit.message);
+                        console.log("clicked on commit: " + commit.message + " (" + commit.detailId + ")");
+                        $("html, body").animate({ scrollTop: $("#" + commit.detailId).offset().top - 140 }, 1000);
                     }
                 }
             });

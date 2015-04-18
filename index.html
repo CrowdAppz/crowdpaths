@@ -41,12 +41,6 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/app.css">
 
-    <script>
-        $(document).ready(function () {
-            pathgraph.init();
-        });
-    </script>
-
 </head>
 <body ng-controller="MainController" layout="row">
 
@@ -60,89 +54,115 @@
         </div>
     </nav>
 </div>
-<canvas id="gitGraph" class="graph-canvas"></canvas>
+<div id="content">
+    <canvas id="gitGraph" class="graph-canvas"></canvas>
 
-<div id="card-container-wrapper">
+    <div id="card-container-wrapper">
+        <div class="statistics-card card" id="stats-card">
+            <div class="card-content">
+                <div class="statistics-card-title">Android Tutorial</div>
+                    <span class="statistics-item"><i class="statistics-icon mdi-device-access-time"></i> <span
+                            class="statistics-text">{{::durationTime}}</span></span>
+                    <span class="statistics-item"><i class="statistics-icon mdi-action-account-child"></i><span
+                            class="statistics-text">{{::usersCompleted}}</span></span>
+                    <span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span
+                            class="statistics-text">{{::pathRating}}</span></span>
+                    <span class="statistics-item"><i class="statistics-icon mdi-communication-call-split"></i><span
+                            class="statistics-text">{{::numberAlternativePaths}}</span></span>
 
-    <div class="statistics-card card" id="stats-card">
-        <div class="card-content">
-            <div class="statistics-card-title">Android Tutorial</div>
-                <span class="statistics-item"><i class="statistics-icon mdi-device-access-time"></i> <span
-                        class="statistics-text">{{::durationTime}}</span></span>
-                <span class="statistics-item"><i class="statistics-icon mdi-action-account-child"></i><span
-                        class="statistics-text">{{::usersCompleted}}</span></span>
-                <span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span
-                        class="statistics-text">{{::pathRating}}</span></span>
-                <span class="statistics-item"><i class="statistics-icon mdi-communication-call-split"></i><span
-                        class="statistics-text">{{::numberAlternativePaths}}</span></span>
-
-            <div class="statistics-card-description white-text">Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                <div class="statistics-card-description white-text">Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="card" id="card-1">
-        <div class="card-header">
-            <div class="card-header-avatar">
-                <img src="\img\youtube-play.png" class="material-avatar"></div>
-            <div class="card-header-info">
-                <span class="card-header-title">This is a cool card</span>
-                <span class="card-header-title card-location">veryyy nice</span>
+        <div class="card" id="card-1">
+            <div class="card-header">
+                <div class="card-header-avatar">
+                    <img src="\img\youtube-play.png" class="material-avatar"></div>
+                <div class="card-header-info">
+                    <span class="card-header-title">This is a cool card</span>
+                    <span class="card-header-title card-location">veryyy nice</span>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="card-body-title">Android is soo much fund</div>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href='#'>This is a link</a>
             </div>
         </div>
-        <div class="card-content">
-            <div class="card-body-title">Android is soo much fund</div>
-            <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-            <a href="#">This is a link</a>
-            <a href='#'>This is a link</a>
-        </div>
-    </div>
-    <div class="card" id="card-2">
-        <div class="card-header">
-            <div class="card-header-avatar">
-                <img src="\img\youtube-play.png" class="material-avatar"></div>
-            <div class="card-header-info">
-                <span class="card-header-title">This is a cool card</span>
-                <span class="card-header-title card-location">veryyy nice</span>
+        <div class="card" id="card-2">
+            <div class="card-header">
+                <div class="card-header-avatar">
+                    <img src="\img\youtube-play.png" class="material-avatar"></div>
+                <div class="card-header-info">
+                    <span class="card-header-title">This is a cool card</span>
+                    <span class="card-header-title card-location">veryyy nice</span>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="card-body-title">Android is soo much fund</div>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href='#'>This is a link</a>
             </div>
         </div>
-        <div class="card-content">
-            <div class="card-body-title">Android is soo much fund</div>
-            <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-            <a href="#">This is a link</a>
-            <a href='#'>This is a link</a>
-        </div>
-    </div>
-    <div class="card" id="card-3">
-        <div class="card-header">
-            <div class="card-header-avatar">
-                <img src="\img\youtube-play.png" class="material-avatar"></div>
-            <div class="card-header-info">
-                <span class="card-header-title">This is a cool card</span>
-                <span class="card-header-title card-location">veryyy nice</span>
+        <div class="card" id="card-3">
+            <div class="card-header">
+                <div class="card-header-avatar">
+                    <img src="\img\youtube-play.png" class="material-avatar"></div>
+                <div class="card-header-info">
+                    <span class="card-header-title">This is a cool card</span>
+                    <span class="card-header-title card-location">veryyy nice</span>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="card-body-title">Android is soo much fund</div>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href='#'>This is a link</a>
             </div>
         </div>
-        <div class="card-content">
-            <div class="card-body-title">Android is soo much fund</div>
-            <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-            <a href="#">This is a link</a>
-            <a href='#'>This is a link</a>
+        <div class="card" id="card-4">
+            <div class="card-header">
+                <div class="card-header-avatar">
+                    <img src="\img\youtube-play.png" class="material-avatar"></div>
+                <div class="card-header-info">
+                    <span class="card-header-title">This is a cool card</span>
+                    <span class="card-header-title card-location">veryyy nice</span>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="card-body-title">Android is soo much fund</div>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href='#'>This is a link</a>
+            </div>
         </div>
     </div>
 </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        pathgraph.init();
+    });
+</script>
 
 </body>
 </html>

@@ -30,10 +30,20 @@ html, body {
     font-size: 48px;
 }
 
+#content {
+    margin-top: 96px;
+    width: 100%;
+}
+
 #card-container-wrapper {
     width: 100%;
     position: absolute;
-    top: 64px;
+    /*top: 64px;*/
     margin: 0 auto;
     padding: 2rem;
+}
+
+.graph-canvas {
+    float: left;
+
 }

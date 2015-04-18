@@ -756,6 +756,8 @@
     this.image = options.image || "img/wiki.png";
 
     this.parent.commits.push( this );
+
+    console.log("detai2: " + options.detail);
   }
 
   /**
@@ -794,26 +796,27 @@
     }
 
     // Detail
-    if ( this.detail !== null ) {
-      this.detail.style.left = this.parent.canvas.offsetLeft + (this.parent.columnMax + 1) * this.template.branch.spacingX + 30 + "px";
-      this.detail.style.top = this.parent.canvas.offsetTop + this.y + 40 + "px";
-      this.detail.width = 30;
-    }
+    //console.log("detail: " + this.detail);
+    //if ( this.detail !== null ) {
+    //  this.detail.style.left = this.parent.canvas.offsetLeft + (this.parent.columnMax + 1) * this.template.branch.spacingX + 30 + "px";
+    //  this.detail.style.top = this.parent.canvas.offsetTop + this.y + 40 + "px";
+    //  this.detail.width = 30;
+    //}
 
     // Message
-    if ( this.messageDisplay ) {
-      var message = this.message;
-      if ( this.messageHashDisplay ) {
-        message = this.sha1 + " " + message;
-      }
-      if ( this.messageAuthorDisplay ) {
-        message = message + (this.author ? " - " + this.author : "");
-      }
-
-      this.context.font = this.messageFont;
-      this.context.fillStyle = this.messageColor;
-      this.context.fillText( message, (this.parent.columnMax + 1) * this.template.branch.spacingX, this.y + 3 );
-    }
+    //if ( this.messageDisplay ) {
+    //  var message = this.message;
+    //  if ( this.messageHashDisplay ) {
+    //    message = this.sha1 + " " + message;
+    //  }
+    //  if ( this.messageAuthorDisplay ) {
+    //    message = message + (this.author ? " - " + this.author : "");
+    //  }
+    //
+    //  this.context.font = this.messageFont;
+    //  this.context.fillStyle = this.messageColor;
+    //  this.context.fillText( message, (this.parent.columnMax + 1) * this.template.branch.spacingX, this.y + 3 );
+    //}
   };
 
   /**

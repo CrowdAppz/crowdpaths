@@ -19,7 +19,12 @@
     padding: 3rem;
     background-color: #185F72;
 }
-
+.card-content-img {
+    float: left;
+    height: 130px;
+    margin-right: 15px;
+    margin-top: 3px;
+}
 .progress {
     height: 3px;
     margin: 0px;
@@ -119,7 +124,7 @@
 .card-location {
     font-weight: 400;
     font-size: 13px;
-    width: 200px;
+    width: 280px;
 }
 
 .card-action {
@@ -156,6 +161,8 @@
     float: right;
     line-height: 140%;
     margin: 0;
+    margin-top: -22px;
+    color: #ff6d00 !important;
 }
 
 .card-action-complete-label {

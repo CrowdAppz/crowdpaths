@@ -582,12 +582,16 @@
 
     // Add height of detail div (normal vertical mode only)
     if ( commit.detail !== null ) {
-      //var offset = window.getComputedStyle(commit.detail).marginBottom
-      commit.detail.style.display = "block";
-      this.parent.commitOffsetY -= commit.detail.clientHeight - 40;
-      console.log("fooo: ", this.parent.commitOffsetY);
+      var i, c, times;
+      for(i = 0; i < this.parent.commits.length; i++) {
+        c = this.parent.commits[i];
+        if(c.sha1 === commit.sha1) {
+          times = i + 1;
+        }
+      }
+      this.parent.commitOffsetY -= commit.detail.clientHeight + 56 - (50 * times) + (28 * (times+1));
     }
-
+    console.log("commit offset y: " + this.parent.commitOffsetY);
     // Auto-render
     this.parent.render();
 
@@ -1011,7 +1015,7 @@
           spacingX: 50
         },
         commit: {
-          spacingY: -80,
+          spacingY: -50,
           dot: {
             size: 14
           },

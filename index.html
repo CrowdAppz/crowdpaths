@@ -46,10 +46,10 @@
             var s = $(window).scrollTop(),
                     d = $(document).height(),
                     c = $(window).height();
-            scrollPercent = (s / (d-c)) * 100;
+            scrollPercent = (s / (d - c)) * 100;
             var position = scrollPercent;
 
-            $("#scroll-progress").css('width', position+'%');
+            $("#scroll-progress").css('width', position + '%');
         });
     </script>
 
@@ -78,7 +78,8 @@
         </div>
         <div class="nav-wrapper">
             <img id="toolbar-logo" src="/img/source-fork.png">
-            <a href="#"  class="brand-logo left"><span style="font-weight: 400;">crowd</span><span style="font-weight: 300;">path</span></a>
+            <a href="#" class="brand-logo left"><span style="font-weight: 400;">crowd</span><span
+                    style="font-weight: 300;">path</span></a>
 
         </div>
     </nav>
@@ -91,6 +92,7 @@
     <div id="card-container-wrapper">
         <div class="statistics-card card card-sizing" id="stats-card">
             <img class="card-image" src="img/Android1.png"/>
+
             <div class="card-content">
                 <div class="statistics-card-title">Android: From Zero to Hero</div>
 
@@ -101,7 +103,7 @@
                 <span class="statistics-item"><i class="statistics-icon mdi-communication-call-split"></i><span
                         class="statistics-text">{{::numberAlternativePaths}}</span></span>
                 <!--<span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span-->
-                        <!--class="statistics-text">{{::pathRating}}</span></span>-->
+                <!--class="statistics-text">{{::pathRating}}</span></span>-->
                 <span class="starrating-wrapper">
                     <span class="starrating statistics-icon mdi-action-star-rate"></span>
                     <span class="starrating statistics-icon mdi-action-star-rate"></span>
@@ -130,14 +132,23 @@
 
             <div class="card-content">
                 <img src="/img/android-studio.png" class="card-content-img"/>
-                <p class="card-content-text">There is a new IDE on the horizon for Android developers, Android Studio, and it's faster and easier to navigate than the current Eclipse-based Android Developer Tools plugin. Get a first look at Android Studio before its official release, here in this course with David Gassner. David shows how to install Android Studio on both Windows and Mac; create new projects and migrate existing ones from Eclipse; navigate and configure the user interface; and build and export Android apps.</p>
+
+                <p class="card-content-text">There is a new IDE on the horizon for Android developers, Android Studio,
+                    and it's faster and easier to navigate than the current Eclipse-based Android Developer Tools
+                    plugin. Get a first look at Android Studio before its official release, here in this course with
+                    David Gassner. David shows how to install Android Studio on both Windows and Mac; create new
+                    projects and migrate existing ones from Eclipse; navigate and configure the user interface; and
+                    build and export Android apps.</p>
             </div>
             <div class="card-action">
-                <p >
-                    <input type="checkbox" id="card-action-complete" checked="checked" />
+                <p>
+                    <input type="checkbox" id="card-action-complete" checked="checked"/>
                     <label class="card-action-complete-label" for="card-action-complete">Completed</label>
                 </p>
 
+                <a target="_blank"
+                   href="http://www.lynda.com/Android-tutorials/Android-Studio-First-Look/143103-2.html?srchtrk=index:1%0Alinktypeid:2%0Aq:Android%0Apage:1%0As:relevance%0Asa:true%0Aproducttypeid:2"
+                   class="card-footer-button">Open Course</a>
             </div>
         </div>
         <div class="card card-sizing" id="card-1">
@@ -147,21 +158,26 @@
                 <div class="card-header-info">
                     <span class="card-header-title-big">Rich and Responsive Layouts (Lesson 5)</span>
                     <span class="card-header-title card-location">Udacity - 3981 Completions</span>
-                    <!--<span class="card-header-title">This is a cool card</span>
-                    <span class="card-header-title card-location">veryyy nice</span>-->
                 </div>
             </div>
 
             <div class="card-content">
+                <img src="/img/responsive-apps.jpg" class="card-content-img"/>
 
-                <p style="margin-top: 10px" class="card-content-text">Create layouts that are specific to different device configurations or screen resolutions, and learn how to implement custom views.</p>
+                <p class="card-content-text">Create layouts that are specific to different device configurations or
+                    screen resolutions, and learn how to implement custom views. Both responsive and adaptive design
+                    attempt to optimize the user experience across different devices, adjusting for different viewport
+                    sizes, and so on. Responsive design works on the principle of flexibility. The idea is that a single
+                    fluid design based upon media queries, and responsive images can be used to create a user experience
+                    that flexes and changes based on a multitude of factors. </p>
             </div>
             <div class="card-action">
-                <p >
-                    <input type="checkbox" id="card-action-complete" checked="checked" />
+                <p>
+                    <input type="checkbox" id="card-action-complete" checked="checked"/>
                     <label class="card-action-complete-label" for="card-action-complete">Completed</label>
                 </p>
-
+                <a target="_blank" href="https://www.udacity.com/course/viewer#!/c-ud853/l-1623168625/m-1667758568"
+                   class="card-footer-button">Open Course</a>
             </div>
         </div>
         <div class="card card-sizing" id="card-3">
@@ -179,42 +195,44 @@
             <div class="card-content">
 
                 <div class="video-container no-controls">
-                    <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1"
+                            frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p style="margin-top: 10px" class="card-content-text">A material metaphor is the unifying theory of a rationalized space and a system of motion. The material is grounded in tactile reality, inspired by the study of paper and ink, yet technologically advanced and open to imagination and magic. More Information on the <a href="http://www.google.com/design/spec/material-design/introduction.html">Material Design Website</a></p>
+                <p style="margin-top: 10px" class="card-content-text">A material metaphor is the unifying theory of a
+                    rationalized space and a system of motion. The material is grounded in tactile reality, inspired by
+                    the study of paper and ink, yet technologically advanced and open to imagination and magic. More
+                    Information on the <a href="http://www.google.com/design/spec/material-design/introduction.html">Material
+                        Design Website</a></p>
             </div>
 
             <div class="card-action">
-                <p >
-                    <input type="checkbox" id="card-action-complete" checked="checked" />
+                <p>
+                    <input type="checkbox" id="card-action-complete" checked="checked"/>
                     <label class="card-action-complete-label" for="card-action-complete">Completed</label>
                 </p>
 
+            </div>
         </div>
-    </div>
 
         <div class="card card-sizing" id="card-1">
             <div class="card-header">
                 <div class="card-header-avatar">
-                    <img src="/img/youtube-play.png" class="material-avatar"></div>
+                    <img src="/img/presentation.png" class="material-avatar"></div>
                 <div class="card-header-info">
-                    <span class="card-header-title-big">Android is soo much fund</span>
-                    <span class="card-header-title card-location">Youtube - 3630 Completes</span>
-                    <!--<span class="card-header-title">This is a cool card</span>
-                    <span class="card-header-title card-location">veryyy nice</span>-->
+                    <span class="card-header-title-big">Android Testing by Jake Wharton</span>
+                    <span class="card-header-title card-location">Spearker Deck - 2587 Completions</span>
                 </div>
             </div>
 
             <div class="card-content">
-                <script async class="speakerdeck-embed" data-id="8389fd60a0e50130aa8066f78f5cbceb" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-                <p style="margin-top: 10px" class="card-content-text">I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+                <script async class="speakerdeck-embed" data-id="8389fd60a0e50130aa8066f78f5cbceb"
+                        data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+                <p style="margin-top: 10px" class="card-content-text">Designing your Android app for testability. How
+                    unit tests, instrumentation tests, and libraries like Dagger improve confidence in your app.</p>
             </div>
             <div class="card-action">
-                <p >
-                    <input type="checkbox" id="card-action-complete" checked="checked" />
+                <p>
+                    <input type="checkbox" id="card-action-complete" checked="checked"/>
                     <label class="card-action-complete-label" for="card-action-complete">Completed</label>
                 </p>
 
@@ -222,20 +240,20 @@
         </div>
 
         <ul class="collapsible popout card-sizing" data-collapsible="accordion">
-        <li>
-            <div class="collapsible-header active"><i class="mdi-image-filter-drama"></i>First</div>
-            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-        </li>
-        <li>
-            <div class="collapsible-header"><i class="mdi-maps-place"></i>Second</div>
-            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-        </li>
-        <li>
-            <div class="collapsible-header"><i class="mdi-social-whatshot"></i>Third</div>
-            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-        </li>
-    </ul>
-</div>
+            <li>
+                <div class="collapsible-header active"><i class="mdi-image-filter-drama"></i>First</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="mdi-maps-place"></i>Second</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="mdi-social-whatshot"></i>Third</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+        </ul>
+    </div>
 
     <div class="fixed-action-btn" style="bottom: 32px; right: 32px;">
         <a class="btn-floating btn-large orange accent-4">
@@ -249,15 +267,15 @@
         </ul>
     </div>
 
-<script>
-    $(document).ready(function () {
-        pathgraph.init();
-    });
-</script>
+    <script>
+        $(document).ready(function () {
+            pathgraph.init();
+        });
+    </script>
 
 </body>
 </html>
 
 <!--<script type="text/javascript">$(document).ready(function () {-->
-    <!--$(".card-content-text").shorten({"showChars": 380});-->
+<!--$(".card-content-text").shorten({"showChars": 380});-->
 <!--});</script>-->

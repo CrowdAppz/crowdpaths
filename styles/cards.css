@@ -5,8 +5,13 @@
     margin: 2.5rem auto;
 }
 
+.card-title-link {
+    text-decoration: none;
+    color:  #FDD835;
+}
+
 .statistics-card {
-    background-color: #0288D1; !important;
+    background-color: #0288D1;
 }
 
 .statistics-card-title {

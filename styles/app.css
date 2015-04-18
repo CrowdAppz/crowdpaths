@@ -23,6 +23,14 @@ html, body {
     z-index: 100;
 }
 
+#toolbar-search {
+    background-color: #015290;
+    top: 0px;
+    left: 20rem;
+    width: 20rem;
+    position: fixed;
+}
+
 #toolbar-container {
     width: 100%;
     position: absolute;
@@ -30,6 +38,7 @@ html, body {
 
 #toolbar-logo {
     font-size: 48px;
+    margin-left: 2rem;
 }
 
 #content {
@@ -47,5 +56,79 @@ html, body {
 
 .graph-canvas {
     float: left;
+}
 
+.input-container {
+    width: 70%;
+    height: 100%;
+    top: 0px;
+    left: 20rem;
+    position: absolute;
+}
+
+.search-input-wrapper{
+    /*background-color: #7986CB; !important;*/
+    /*width: 100%;*/
+    /*padding: 4px 4px 4px 40px;*/
+    /*border: 0;*/
+    /*color: white;*/
+    /*font-weight: 100;*/
+    /*margin-top: 20px;*/
+    /*outline: none;*/
+}
+
+#search-input {
+    background-color: #7986CB; !important;
+    width: 100%;
+    /*padding: 4px 4px 4px 40px;*/
+    padding: 0px 0px 0px 32px;
+    border: 0;
+    color: white;
+    font-weight: 100;
+    margin-top: 18px;
+    outline: none;
+    font-size: 24px;
+}
+
+#search-input:focus {
+    background-color: white;
+    color: #666;
+    outline: none;
+}
+
+#search-input::-webkit-input-placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: 100;
+}
+
+#search-input:-moz-placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: 100;
+}
+
+#search-input::-moz-placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: 100;
+}
+
+#search-input:-ms-input-placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: 100;
+}
+
+#search-icon {
+    color: white !important;
+    float: left;
+
+    position: relative;
+    top: -63px;
+    left: 8px;
+}
+
+#search-icon.focus {
+    color: #666 !important;
 }

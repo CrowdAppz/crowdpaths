@@ -41,16 +41,37 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/app.css">
 
+    <script>
+        $(document).ready(function () {
+            pathgraph.init();
+        });
+        $(window).scroll(function () {
+            var s = $(window).scrollTop(),
+                    d = $(document).height(),
+                    c = $(window).height();
+            scrollPercent = (s / (d - c)) * 100;
+            var position = scrollPercent;
+
+            $("#scroll-progress").css('width', position + '%');
+
+        });
+    </script>
+
 </head>
 <body ng-controller="MainController" layout="row">
 
 <img src="img/wiki.png" id="wiki-img" style="visibility: hidden; display: none;"/>
 
 <div id="toolbar-container">
+
     <nav id="toolbar">
+        <div class="progress">
+            <div class="determinate" id="scroll-progress" style="width: 0%"></div>
+        </div>
         <div class="nav-wrapper">
-            <i id="toolbar-logo" class="mdi-communication-call-split"><a href="#"
-                                                                         class="brand-logo left">CrowdPaths</a></i>
+            <img id="toolbar-logo" src="/img/source-fork.png">
+            <a href="#" class="brand-logo left"><span style="font-weight: 400;">crowd</span><span
+                    style="font-weight: 300;">path</span></a>
 
             <div class="input-container">
                 <input type="text" placeholder="Search" class="search-input" id="search-input"
@@ -59,12 +80,14 @@
             </div>
         </div>
     </nav>
+
 </div>
 <div id="content">
     <div id="card-container-wrapper">
         <div class="statistics-card card">
             <div class="card-content">
-                <div class="statistics-card-title"><a class="card-title-link" href="http://localhost:8000/index.html">Android Tutorial</a></div>
+                <div class="statistics-card-title"><a class="card-title-link" href="http://localhost:8000/index.html">Android
+                    Tutorial</a></div>
                 <span class="statistics-item"><i class="statistics-icon mdi-device-access-time"></i> <span
                         class="statistics-text">{{::durationTime}}</span></span>
                 <span class="statistics-item"><i class="statistics-icon mdi-action-account-child"></i><span

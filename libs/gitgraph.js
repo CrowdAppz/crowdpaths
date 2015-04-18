@@ -763,6 +763,7 @@
         this.x = options.x;
         this.y = options.y;
         this.image = options.image || "wiki-img";
+        this.detailId = options.detailId;
 
         this.parent.commits.push(this);
     }

@@ -12,10 +12,11 @@
 
 .card-image {
     height: 215px;
+    max-width: 192px;
     float: left;
     background-color: white;
     margin-right: 2rem;
-    padding: 10px 10px 10px 10px;
+    padding: 3rem;
     background-color: #185F72;
 }
 

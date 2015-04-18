@@ -82,7 +82,7 @@ html, body {
 }
 
 #search-input {
-    background-color: #1367AD; !important;
+    background-color: #277286; !important;
     width: 100%;
     /*padding: 4px 4px 4px 40px;*/
     padding: 0px 0px 0px 32px;
@@ -91,13 +91,14 @@ html, body {
     font-weight: 100;
     margin-top: 18px;
     outline: none;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 #search-input:focus {
     background-color: white;
     color: #666;
     outline: none;
+    font-weight: 400;
 }
 
 #search-input::-webkit-input-placeholder {
@@ -129,7 +130,7 @@ html, body {
     float: left;
 
     position: relative;
-    top: -63px;
+    top: -61px;
     left: 8px;
 }
 

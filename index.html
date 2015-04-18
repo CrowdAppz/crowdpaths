@@ -42,9 +42,6 @@
     <link rel="stylesheet" type="text/css" href="styles/app.css">
 
     <script>
-        $(document).ready(function () {
-            pathgraph.init();
-        });
         $(window).scroll(function () {
             var s = $(window).scrollTop(),
                     d = $(document).height(),
@@ -53,7 +50,6 @@
             var position = scrollPercent;
 
             $("#scroll-progress").css('width', position+'%');
-
         });
     </script>
 
@@ -275,6 +271,7 @@
 
 <script>
     $(document).ready(function () {
+        console.log("ready");
         pathgraph.init();
     });
 </script>

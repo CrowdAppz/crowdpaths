@@ -84,112 +84,33 @@
 </div>
 <div id="content">
     <div id="card-container-wrapper">
-        <div class="statistics-card card">
+        <div class="statistics-card card startpage-statistics-card card-sizing"
+             ng-repeat="c in startPageContent | filter:searchQuery">
+            <img class="card-image" src="{{c.imgSrc}}"/>
+
             <div class="card-content">
-                <div class="statistics-card-title"><a class="card-title-link" href="http://localhost:8000/index.html">Android
-                    Tutorial</a></div>
-                <span class="statistics-item"><i class="statistics-icon mdi-device-access-time"></i> <span
-                        class="statistics-text">{{::durationTime}}</span></span>
-                <span class="statistics-item"><i class="statistics-icon mdi-action-account-child"></i><span
-                        class="statistics-text">{{::usersCompleted}}</span></span>
-                <span class="statistics-item"><i class="statistics-icon mdi-communication-call-split"></i><span
-                        class="statistics-text">{{::numberAlternativePaths}}</span></span>
+                <div class="statistics-card-title"><a class="card-title-link" href="http://localhost:8000/index.html">{{c.title}}</a>
+                </div>
+                <span class="statistics-item"><i
+                        class="statistics-icon startpage-statistics-icon mdi-device-access-time"></i> <span
+                        class="statistics-text startpage-statistics-text">{{::c.durationTime}}</span></span>
+                <span class="statistics-item"><i
+                        class="statistics-icon startpage-statistics-icon mdi-action-account-child"></i><span
+                        class="statistics-text startpage-statistics-text">{{::c.usersCompleted}}</span></span>
+                <span class="statistics-item"><i
+                        class="statistics-icon startpage-statistics-icon mdi-communication-call-split"></i><span
+                        class="statistics-text startpage-statistics-text">{{::c.numberAlternativePaths}}</span></span>
                 <!--<span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span-->
                 <!--class="statistics-text">{{::pathRating}}</span></span>-->
                 <span class="starrating-wrapper">
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate white-text"></span>
+                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"></span>
+                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"></span>
+                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"></span>
+                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"></span>
+                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate white-text"></span>
                 </span>
 
-                <div class="statistics-card-description white-text">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </div>
-            </div>
-        </div>
-
-        <div class="statistics-card card" ng-hide="searchQuery.indexOf('and') > -1">
-            <div class="card-content">
-                <div class="statistics-card-title">Android Tutorial</div>
-                <span class="statistics-item"><i class="statistics-icon mdi-device-access-time"></i> <span
-                        class="statistics-text">{{::durationTime}}</span></span>
-                <span class="statistics-item"><i class="statistics-icon mdi-action-account-child"></i><span
-                        class="statistics-text">{{::usersCompleted}}</span></span>
-                <span class="statistics-item"><i class="statistics-icon mdi-communication-call-split"></i><span
-                        class="statistics-text">{{::numberAlternativePaths}}</span></span>
-                <!--<span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span-->
-                <!--class="statistics-text">{{::pathRating}}</span></span>-->
-                <span class="starrating-wrapper">
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate white-text"></span>
-                </span>
-
-                <div class="statistics-card-description white-text">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </div>
-            </div>
-        </div>
-
-        <div class="statistics-card card" ng-hide="searchQuery.indexOf('and') > -1">
-            <div class="card-content">
-                <div class="statistics-card-title">Android Tutorial</div>
-                <span class="statistics-item"><i class="statistics-icon mdi-device-access-time"></i> <span
-                        class="statistics-text">{{::durationTime}}</span></span>
-                <span class="statistics-item"><i class="statistics-icon mdi-action-account-child"></i><span
-                        class="statistics-text">{{::usersCompleted}}</span></span>
-                <span class="statistics-item"><i class="statistics-icon mdi-communication-call-split"></i><span
-                        class="statistics-text">{{::numberAlternativePaths}}</span></span>
-                <!--<span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span-->
-                <!--class="statistics-text">{{::pathRating}}</span></span>-->
-                <span class="starrating-wrapper">
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate white-text"></span>
-                </span>
-
-                <div class="statistics-card-description white-text">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </div>
-            </div>
-        </div>
-
-        <div class="statistics-card card" ng-hide="searchQuery.indexOf('and') > -1">
-            <div class="card-content">
-                <div class="statistics-card-title">Android Tutorial</div>
-                <span class="statistics-item"><i class="statistics-icon mdi-device-access-time"></i> <span
-                        class="statistics-text">{{::durationTime}}</span></span>
-                <span class="statistics-item"><i class="statistics-icon mdi-action-account-child"></i><span
-                        class="statistics-text">{{::usersCompleted}}</span></span>
-                <span class="statistics-item"><i class="statistics-icon mdi-communication-call-split"></i><span
-                        class="statistics-text">{{::numberAlternativePaths}}</span></span>
-                <!--<span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span-->
-                <!--class="statistics-text">{{::pathRating}}</span></span>-->
-                <span class="starrating-wrapper">
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon mdi-action-star-rate white-text"></span>
-                </span>
-
-                <div class="statistics-card-description white-text">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </div>
+                <div class="statistics-card-description">{{c.shortDescription}}</div>
             </div>
         </div>
     </div>

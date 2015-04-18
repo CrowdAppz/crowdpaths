@@ -54,14 +54,14 @@
                 messageDisplay: true,
                 image: "img/android.png"
             });
-            design.merge(master);
-            master.commit({
+            design.merge(master, {
                 dotSize: 18,
                 message: "Android Debugging",
                 detailId: "card-5",
                 messageDisplay: true,
                 image: "img/vogella.png"
-            }).commit({
+            });
+            master.commit({
                 dotSize: 18,
                 message: "Android Testing",
                 detailId: "card-2",
@@ -97,8 +97,7 @@
                 image: "img/file-pdf.png",
                 messageDisplay: true
             });
-            game.merge(master);
-            master.commit({
+            game.merge(master, {
                 dotSize: 18,
                 message: "How to get rich with Crap - Release your App!",
                 detailId: "card-2",
@@ -113,10 +112,9 @@
         bindCanvasClick: function () {
             var graphCanvas = $("#gitGraph")[0];
             $("#gitGraph").on("click", function (event) {
-                var x = event.originalEvent.pageX - graphCanvas.offsetLeft - global.gitgraph.marginX;
-                var y = event.originalEvent.pageY - graphCanvas.offsetTop - global.gitgraph.marginY;
+                var x = event.originalEvent.pageX - graphCanvas.offsetParent.offsetLeft - graphCanvas.offsetLeft - global.gitgraph.marginX;
+                var y = event.originalEvent.pageY - graphCanvas.offsetParent.offsetTop - graphCanvas.offsetTop - global.gitgraph.marginY;
                 var i, commit;
-                console.log("click: " + x + " | " + y);
 
                 for(i = 0; i < global.gitgraph.commits.length; i++) {
                     commit = global.gitgraph.commits[i];
@@ -124,8 +122,10 @@
                     var bottom = commit.y + commit.dotSize;
                     var left = commit.x - commit.dotSize;
                     var right = commit.x + commit.dotSize;
+                    //console.log("x: " + x + " | y: " + y + " / top: " + top
+                    //    + " | bottom: " + bottom + " | left: " + left + " | right: " + right);
                     if ((y > top && y < bottom) && (x > left && x < right )) {
-                        console.log("clicked on commit: " + commit.sha1);
+                        console.log("clicked on commit: " + commit.message);
                     }
                 }
             });

@@ -57,16 +57,18 @@
         });
     </script>
 
+
 </head>
 <body ng-controller="MainController" layout="row">
 
 <img src="img/wiki.png" id="wiki-img" style="visibility: hidden; display: none;"/>
 
 <div id="toolbar-container">
-    <div class="progress">
-        <div class="determinate" id="scroll-progress" style="width: 70%"></div>
-    </div>
+
     <nav id="toolbar">
+        <div class="progress">
+            <div class="determinate" id="scroll-progress" style="width: 70%"></div>
+        </div>
         <div class="nav-wrapper">
             <i id="toolbar-logo" class="mdi-communication-call-split"><a href="#"
                                                                          class="brand-logo left">crowdpaths</a></i>
@@ -74,29 +76,37 @@
     </nav>
 
 </div>
-<canvas id="gitGraph" class="graph-canvas"></canvas>
+<div id="content">
+    <canvas id="gitGraph" class="graph-canvas"></canvas>
 
-<div id="card-container-wrapper">
+    <div id="card-container-wrapper">
+        <div class="statistics-card card card-sizing" id="stats-card">
+            <div class="card-content">
+                <div class="statistics-card-title">Android Tutorial</div>
 
-    <div class="statistics-card card card-sizing" id="stats-card">
-        <div class="card-content">
-            <div class="statistics-card-title">Android Tutorial</div>
                 <span class="statistics-item"><i class="statistics-icon mdi-device-access-time"></i> <span
                         class="statistics-text">{{::durationTime}}</span></span>
                 <span class="statistics-item"><i class="statistics-icon mdi-action-account-child"></i><span
                         class="statistics-text">{{::usersCompleted}}</span></span>
-                <span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span
-                        class="statistics-text">{{::pathRating}}</span></span>
                 <span class="statistics-item"><i class="statistics-icon mdi-communication-call-split"></i><span
                         class="statistics-text">{{::numberAlternativePaths}}</span></span>
+                <!--<span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span-->
+                        <!--class="statistics-text">{{::pathRating}}</span></span>-->
+                <span class="starrating-wrapper">
+                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
+                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
+                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
+                    <span class="starrating statistics-icon mdi-action-star-rate"></span>
+                    <span class="starrating statistics-icon mdi-action-star-rate white-text"></span>
+                </span>
 
-            <div class="statistics-card-description white-text">Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                <div class="statistics-card-description white-text">Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </div>
             </div>
         </div>
-    </div>
 
         <div class="card card-sizing">
             <div class="card-header">
@@ -132,6 +142,7 @@
                     <input type="checkbox" id="card-action-complete" checked="checked" />
                     <label class="card-action-complete-label" for="card-action-complete">Completed</label>
                 </p>
+
         </div>
     </div>
     <ul class="collapsible popout card-sizing" data-collapsible="accordion">
@@ -161,6 +172,12 @@
             <li><a class="btn-floating blue"><i class="large mdi-editor-attach-file"></i></a></li>
         </ul>
     </div>
+
+<script>
+    $(document).ready(function () {
+        pathgraph.init();
+    });
+</script>
 
 </body>
 </html>

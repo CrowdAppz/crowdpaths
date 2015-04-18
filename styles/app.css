@@ -19,6 +19,8 @@ html, body {
     background-color: #01579B;
     witdh: 100%;
     margin-bottom: 2rem;
+    position: fixed;
+    z-index: 100;
 }
 
 #toolbar-container {
@@ -30,10 +32,20 @@ html, body {
     font-size: 48px;
 }
 
+#content {
+    margin-top: 96px;
+    width: 100%;
+}
+
 #card-container-wrapper {
     width: 100%;
     position: absolute;
-    top: 64px;
+    /*top: 64px;*/
     margin: 0 auto;
     padding: 2rem;
+}
+
+.graph-canvas {
+    float: left;
+
 }

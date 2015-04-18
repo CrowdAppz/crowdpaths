@@ -1,5 +1,5 @@
 .card-sizing {
-    min-height: 150px;
+    /*min-height: 150px;*/
     max-width: 85rem;
     min-width: 20rem;
     margin: 2.5rem auto;
@@ -125,4 +125,14 @@
 .card-action-img {
     font-size: 2.5rem;
     color: #737373;
+}
+
+.starrating-wrapper{
+    margin-left: -9px;
+}
+
+.starrating{
+    margin-right: -14px;
+    padding: 0;
+    font-size: 32px;
 }

@@ -5,13 +5,27 @@
         init: function () {
             var gitgraph = new GitGraph({
                 template: "metro",
-                orientation: "vertical",
-                mode: "compact"
+                orientation: "vertical"
             });
 
-            gitgraph.branch("master");
-            gitgraph.commit().commit().commit({dotColor: "#00ff00"}); // 3 commits upon HEAD
-            gitgraph.branch("develop").commit().commit();
+            gitgraph.branch("master").commit({
+                detailId: "stats-card",
+                message: "sc"
+            }).commit( {
+                detailId: "card-1",
+                message: "1"
+            }).commit({
+                dotColor: "#00ff00",
+                message: "2",
+                detailId: "card-2"
+            }); // 3 commits upon HEAD
+            gitgraph.branch("develop").commit({
+                message: "3",
+                detailId: "card-3"
+            }).commit({
+                message: "4",
+                detailId: "card-4"
+            });
 
             global.gitgraph = gitgraph;
 

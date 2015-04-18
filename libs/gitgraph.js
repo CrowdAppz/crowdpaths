@@ -117,6 +117,7 @@
     this.tooltip.className = "gitgraph-tooltip";
     this.tooltip.style.position = "fixed";
     this.tooltip.style.display = "none";
+    this.tooltip.style.zIndex = 10001;
 
     // Add tooltip div into body
     document.body.appendChild( this.tooltip );
@@ -323,8 +324,9 @@
     function showCommitTooltip () {
       self.tooltip.style.left = event.x + "px"; // TODO Scroll bug
       self.tooltip.style.top = event.y + "px";  // TODO Scroll bug
-      self.tooltip.textContent = commit.sha1 + " - " + commit.message;
+      self.tooltip.textContent = commit.message;
       self.tooltip.style.display = "block";
+      self.tooltip.style.zIndex = 10001;
     }
 
     function emitMouseoverEvent () {

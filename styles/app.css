@@ -12,7 +12,7 @@ html, body {
     font-weight: 300;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    background-color: #ECECEC;
 }
 
 #toolbar {
@@ -30,12 +30,20 @@ html, body {
     font-size: 48px;
 }
 
+#content {
+    margin-top: 96px;
+    width: 100%;
+}
+
 #card-container-wrapper {
     width: 100%;
-    height: 100%;
-    position: relative;
-    top: 64px;
+    position: absolute;
+    /*top: 64px;*/
     margin: 0 auto;
     padding: 2rem;
-    background-color: #ECECEC;
+}
+
+.graph-canvas {
+    float: left;
+
 }

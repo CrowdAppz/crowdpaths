@@ -45,6 +45,16 @@
         $(document).ready(function () {
             pathgraph.init();
         });
+        $(window).scroll(function () {
+            var s = $(window).scrollTop(),
+                    d = $(document).height(),
+                    c = $(window).height();
+            scrollPercent = (s / (d-c)) * 100;
+            var position = scrollPercent;
+
+            $("#scroll-progress").css('width', position+'%');
+
+        });
     </script>
 
 </head>
@@ -53,18 +63,22 @@
 <img src="img/wiki.png" id="wiki-img" style="visibility: hidden; display: none;"/>
 
 <div id="toolbar-container">
+    <div class="progress">
+        <div class="determinate" id="scroll-progress" style="width: 70%"></div>
+    </div>
     <nav id="toolbar">
         <div class="nav-wrapper">
             <i id="toolbar-logo" class="mdi-communication-call-split"><a href="#"
                                                                          class="brand-logo left">crowdpaths</a></i>
         </div>
     </nav>
+
 </div>
 <canvas id="gitGraph" class="graph-canvas"></canvas>
 
 <div id="card-container-wrapper">
 
-    <div class="statistics-card card" id="stats-card">
+    <div class="statistics-card card card-sizing" id="stats-card">
         <div class="card-content">
             <div class="statistics-card-title">Android Tutorial</div>
                 <span class="statistics-item"><i class="statistics-icon mdi-device-access-time"></i> <span
@@ -84,12 +98,13 @@
         </div>
     </div>
 
-        <div class="card">
+        <div class="card card-sizing">
             <div class="card-header">
                 <div class="card-header-avatar">
                     <img src="/img/youtube-play.png" class="material-avatar"></div>
                 <div class="card-header-info">
-                    <div class="card-body-title">Android is soo much fund</div>
+                    <span class="card-header-title-big">Android is soo much fund</span>
+                    <span class="card-header-title card-location">Youtube - 3630 Completes</span>
                     <!--<span class="card-header-title">This is a cool card</span>
                     <span class="card-header-title card-location">veryyy nice</span>-->
                 </div>
@@ -99,7 +114,17 @@
                 <div class="video-container no-controls">
                     <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p style="margin-top: 10px">I am a very simple card. I am good at containing small bits of information.
+                <p style="margin-top: 10px" class="card-content-text">I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.</p>
             </div>
             <div class="card-action">
@@ -109,57 +134,20 @@
                 </p>
         </div>
     </div>
-    <div class="card">
-        <div class="card-header">
-            <div class="card-header-avatar">
-                <img src="/img/youtube-play.png" class="material-avatar"></div>
-            <div class="card-header-info">
-                <div class="card-body-title">Android is soo much fund</div>
-                <!--<span class="card-header-title">This is a cool card</span>
-                <span class="card-header-title card-location">veryyy nice</span>-->
-            </div>
-        </div>
-
-        <div class="card-content">
-            <div class="video-container no-controls">
-                <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <p style="margin-top: 10px">I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-            <p >
-                <input type="checkbox" id="card-action-complete" checked="checked" />
-                <label class="card-action-complete-label" for="card-action-complete">Completed</label>
-            </p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <div class="card-header-avatar">
-                <img src="/img/youtube-play.png" class="material-avatar"></div>
-            <div class="card-header-info">
-                <div class="card-body-title">Android is soo much fund</div>
-                <!--<span class="card-header-title">This is a cool card</span>
-                <span class="card-header-title card-location">veryyy nice</span>-->
-            </div>
-        </div>
-
-        <div class="card-content">
-            <div class="video-container no-controls">
-                <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <p style="margin-top: 10px">I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-            <p >
-                <input type="checkbox" id="card-action-complete" checked="checked" />
-                <label class="card-action-complete-label" for="card-action-complete">Completed</label>
-            </p>
-        </div>
-    </div>
-</div>
+    <ul class="collapsible popout card-sizing" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header active"><i class="mdi-image-filter-drama"></i>First</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="mdi-maps-place"></i>Second</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="mdi-social-whatshot"></i>Third</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+    </ul>
 </div>
 
     <div class="fixed-action-btn" style="bottom: 45px; right: 55px;">
@@ -174,6 +162,9 @@
         </ul>
     </div>
 
-</div>
 </body>
 </html>
+
+<script type="text/javascript">$(document).ready(function () {
+    $(".card-content-text").shorten({"showChars": 380});
+});</script>

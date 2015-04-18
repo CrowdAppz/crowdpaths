@@ -1,10 +1,13 @@
-.card {
+.card-sizing {
     min-height: 150px;
     max-width: 85rem;
     min-width: 20rem;
     margin: 2.5rem auto;
 }
-
+.progress{
+    height: 3px;
+    margin: 0px;
+}
 .statistics-card {
     background-color: #0288D1; !important;
 }
@@ -45,14 +48,24 @@
     vertical-align: middle;
 }
 
+.card-header-title-big {
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #a6ece9;
+    font-size: 20px;
+    float: left;
+    clear: both;
+}
 .card-header-avatar {
     display: inline-block;
     float: left;
+    margin-top: 2px;
 }
 
 .card-header-info {
     display: inline-block;
-    margin-top: 1px;
 }
 
 .card-header-title {
@@ -89,8 +102,8 @@
 
 .material-avatar {
     vertical-align: middle;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     margin-right: 16px;
     border-radius: 50%;
     box-sizing: content-box;

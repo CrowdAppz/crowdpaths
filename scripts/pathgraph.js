@@ -8,23 +8,34 @@
                 orientation: "vertical"
             });
 
-            gitgraph.branch("master").commit({
+            var master = gitgraph.branch("master");
+            master.commit({
+                dotSize: 28,
                 detailId: "stats-card",
                 message: "sc"
             }).commit( {
+                dotSize: 28,
                 detailId: "card-1",
                 message: "1"
             }).commit({
-                dotColor: "#00ff00",
+                dotSize: 28,
                 message: "2",
                 detailId: "card-2"
             });
-            gitgraph.branch("develop").commit({
+            var develop = gitgraph.branch("develop");
+            develop.commit({
+                dotSize: 28,
                 message: "3",
                 detailId: "card-3"
             }).commit({
+                dotSize: 28,
                 message: "4",
                 detailId: "card-4"
+            });
+            master.commit({
+                dotSize: 28,
+                message: "5",
+                detailId: "card-5"
             });
 
             global.gitgraph = gitgraph;

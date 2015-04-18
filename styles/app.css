@@ -52,5 +52,5 @@ html, body {
 
 .graph-canvas {
     float: left;
-
+    margin-left: 27rem;
 }

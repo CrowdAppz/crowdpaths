@@ -7,14 +7,16 @@
 
 .card-title-link {
     text-decoration: none;
-    color:  #FDD835;
-
-.progress{
+    color: #FDD835;
+}
+.progress {
     height: 3px;
     margin: 0px;
 }
+
 .statistics-card {
-    background-color: #185F72; !important;
+    background-color: #185F72;
+!important;
 }
 
 .statistics-card-title {
@@ -63,6 +65,7 @@
     float: left;
     clear: both;
 }
+
 .card-header-avatar {
     display: inline-block;
     float: left;
@@ -89,11 +92,13 @@
     font-size: 13px;
     width: 200px;
 }
+
 .card-action {
     position: relative;
     padding-bottom: 16px;
     padding-top: 16px;
 }
+
 .card-body-title {
     margin-bottom: 0.5rem;
     line-height: 48px;
@@ -117,6 +122,7 @@
     border: 1px solid #C7F3E5;
     box-shadow: 0 0 1px #9D9D9D;
 }
+
 .card-footer-button {
     float: right;
     line-height: 140%;
@@ -132,11 +138,11 @@
     color: #737373;
 }
 
-.starrating-wrapper{
+.starrating-wrapper {
     margin-left: -9px;
 }
 
-.starrating{
+.starrating {
     margin-right: -14px;
     padding: 0;
     font-size: 32px;

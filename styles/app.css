@@ -12,5 +12,45 @@ html, body {
     font-weight: 300;
     margin: 0;
     padding: 0;
-    overflow-x: hiden;
+    background-color: #ECECEC;
+}
+
+#toolbar {
+    background-color: #01579B;
+    witdh: 100%;
+    margin-bottom: 2rem;
+    position: fixed;
+    z-index: 100;
+}
+
+#toolbar-container {
+    width: 100%;
+    position: absolute;
+}
+
+#toolbar-logo {
+    font-size: 48px;
+    width: 3.7rem;
+    height: 3.7rem;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    margin-top: 1.1rem;
+}
+
+#content {
+    margin-top: 96px;
+    width: 100%;
+}
+
+#card-container-wrapper {
+    width: 100%;
+    position: absolute;
+    /*top: 64px;*/
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.graph-canvas {
+    float: left;
+    margin-left: 27rem;
 }

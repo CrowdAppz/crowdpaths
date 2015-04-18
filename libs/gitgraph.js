@@ -582,10 +582,16 @@
 
     // Add height of detail div (normal vertical mode only)
     if ( commit.detail !== null ) {
-      commit.detail.style.display = "block";
-      this.parent.commitOffsetY -= commit.detail.clientHeight - 40;
+      var i, c, times;
+      for(i = 0; i < this.parent.commits.length; i++) {
+        c = this.parent.commits[i];
+        if(c.sha1 === commit.sha1) {
+          times = i + 1;
+        }
+      }
+      this.parent.commitOffsetY -= commit.detail.clientHeight + 56 - (50 * times) + (28 * (times+1));
     }
-
+    console.log("commit offset y: " + this.parent.commitOffsetY);
     // Auto-render
     this.parent.render();
 
@@ -753,6 +759,7 @@
     this.parentCommit = options.parentCommit;
     this.x = options.x;
     this.y = options.y;
+    this.image = options.image || "img/wiki.png";
 
     this.parent.commits.push( this );
   }
@@ -777,32 +784,43 @@
     this.context.fill();
     this.context.closePath();
 
+    // Image
+    var img = document.getElementById("wiki-img");
+    //var img = document.createElement("img");
+    //img.src = this.image;
+    //img.width = this.dotSize;
+    //img.height = this.dotSize;
+    var half = this.dotSize / 2;
+    this.context.drawImage(img, (this.x - half), (this.y - half), this.dotSize, this.dotSize);
+
+
     // Arrow
     if ( this.arrowDisplay && this.parentCommit instanceof Commit ) {
       this.arrow();
     }
 
     // Detail
-    if ( this.detail !== null ) {
-      this.detail.style.left = this.parent.canvas.offsetLeft + (this.parent.columnMax + 1) * this.template.branch.spacingX + 30 + "px";
-      this.detail.style.top = this.parent.canvas.offsetTop + this.y + 40 + "px";
-      this.detail.width = 30;
-    }
+    //console.log("detail: ",this.detail);
+    //if ( this.detail !== null ) {
+    //  this.detail.style.left = this.parent.canvas.offsetLeft + (this.parent.columnMax + 1) * this.template.branch.spacingX + 30 + "px";
+    //  this.detail.style.top = this.parent.canvas.offsetTop + this.y + 40 + "px";
+    //  this.detail.width = 30;
+    //}
 
     // Message
-    if ( this.messageDisplay ) {
-      var message = this.message;
-      if ( this.messageHashDisplay ) {
-        message = this.sha1 + " " + message;
-      }
-      if ( this.messageAuthorDisplay ) {
-        message = message + (this.author ? " - " + this.author : "");
-      }
-
-      this.context.font = this.messageFont;
-      this.context.fillStyle = this.messageColor;
-      this.context.fillText( message, (this.parent.columnMax + 1) * this.template.branch.spacingX, this.y + 3 );
-    }
+    //if ( this.messageDisplay ) {
+    //  var message = this.message;
+    //  if ( this.messageHashDisplay ) {
+    //    message = this.sha1 + " " + message;
+    //  }
+    //  if ( this.messageAuthorDisplay ) {
+    //    message = message + (this.author ? " - " + this.author : "");
+    //  }
+    //
+    //  this.context.font = this.messageFont;
+    //  this.context.fillStyle = this.messageColor;
+    //  this.context.fillText( message, (this.parent.columnMax + 1) * this.template.branch.spacingX, this.y + 3 );
+    //}
   };
 
   /**
@@ -997,7 +1015,7 @@
           spacingX: 50
         },
         commit: {
-          spacingY: -80,
+          spacingY: -50,
           dot: {
             size: 14
           },

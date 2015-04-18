@@ -19,7 +19,7 @@ angular.module('crowdpaths', [])
 
         $scope.startPageContent = [
             {
-                "title": "Android Tutorial",
+                "title": "Android: From Zero to Hero",
                 "durationTime": "3h 05m",
                 "usersCompleted": "1337",
                 "numberAlternativePaths": "3",

@@ -51,26 +51,17 @@
 <div ng-controller="MainController" layout="row">
     <!--<canvas id="gitGraph"></canvas>-->
 
-    <nav id="toolbar">
-        <div class="nav-wrapper">
-            <i id="toolbar-logo" class="mdi-communication-call-split"><a href="#" class="brand-logo left">crowdpaths</a></i>
-        </div>
-    </nav>
-
-    <div class="card-container-wrapper">
-        <md-content>
-            <div class="card-container">
-                <md-card class="card" ng-repeat="">
-                    <md-card-content>
-
-                    </md-card-content>
-                </md-card>
+    <div id="toolbar-container">
+        <nav id="toolbar">
+            <div class="nav-wrapper">
+                <i id="toolbar-logo" class="mdi-communication-call-split"><a href="#"
+                                                                             class="brand-logo left">crowdpaths</a></i>
             </div>
-            <!--<md-button class="more-button" ng-show="moreOffersAvailable" ng-click="loadMoreOffers()">More...-->
-            <!--</md-button>-->
-        </md-content>
+        </nav>
     </div>
-    </md-content>
+    <div id="card-container-wrapper">
+
+    </div>
 </div>
 
 </body>

@@ -48,19 +48,30 @@
     </script>
 
 </head>
-<body ng-controller="MainController" layout="row">
-    <canvas id="gitGraph"></canvas>
+<div ng-controller="MainController" layout="row">
+    <!--<canvas id="gitGraph"></canvas>-->
 
-<nav id="toolbar">
-    <div class="nav-wrapper">
-        <a href="#" class="brand-logo right">crowdpaths</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="components.html">Components</a></li>
-            <li><a href="javascript.html">JavaScript</a></li>
-        </ul>
+    <nav id="toolbar">
+        <div class="nav-wrapper">
+            <i id="toolbar-logo" class="mdi-communication-call-split"><a href="#" class="brand-logo left">crowdpaths</a></i>
+        </div>
+    </nav>
+
+    <div class="card-container-wrapper">
+        <md-content>
+            <div class="card-container">
+                <md-card class="card" ng-repeat="">
+                    <md-card-content>
+
+                    </md-card-content>
+                </md-card>
+            </div>
+            <!--<md-button class="more-button" ng-show="moreOffersAvailable" ng-click="loadMoreOffers()">More...-->
+            <!--</md-button>-->
+        </md-content>
     </div>
-</nav>
+    </md-content>
+</div>
 
 </body>
 </html>

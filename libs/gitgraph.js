@@ -582,8 +582,10 @@
 
     // Add height of detail div (normal vertical mode only)
     if ( commit.detail !== null ) {
+      //var offset = window.getComputedStyle(commit.detail).marginBottom
       commit.detail.style.display = "block";
       this.parent.commitOffsetY -= commit.detail.clientHeight - 40;
+      console.log("fooo: ", this.parent.commitOffsetY);
     }
 
     // Auto-render
@@ -756,8 +758,6 @@
     this.image = options.image || "img/wiki.png";
 
     this.parent.commits.push( this );
-
-    console.log("detai2: " + options.detail);
   }
 
   /**
@@ -796,7 +796,7 @@
     }
 
     // Detail
-    //console.log("detail: " + this.detail);
+    //console.log("detail: ",this.detail);
     //if ( this.detail !== null ) {
     //  this.detail.style.left = this.parent.canvas.offsetLeft + (this.parent.columnMax + 1) * this.template.branch.spacingX + 30 + "px";
     //  this.detail.style.top = this.parent.canvas.offsetTop + this.y + 40 + "px";

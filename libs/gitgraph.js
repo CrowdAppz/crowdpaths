@@ -753,6 +753,7 @@
     this.parentCommit = options.parentCommit;
     this.x = options.x;
     this.y = options.y;
+    this.image = options.image || "img/wiki.png";
 
     this.parent.commits.push( this );
   }
@@ -776,6 +777,16 @@
 
     this.context.fill();
     this.context.closePath();
+
+    // Image
+    var img = document.getElementById("wiki-img");
+    //var img = document.createElement("img");
+    //img.src = this.image;
+    //img.width = this.dotSize;
+    //img.height = this.dotSize;
+    var half = this.dotSize / 2;
+    this.context.drawImage(img, (this.x - half), (this.y - half), this.dotSize, this.dotSize);
+
 
     // Arrow
     if ( this.arrowDisplay && this.parentCommit instanceof Commit ) {

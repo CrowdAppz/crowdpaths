@@ -13,16 +13,19 @@
                 dotSize: 18,
                 detailId: "stats-card",
                 message: "Android: From Zero to Hero",
+                image: "flag-checkered-img",
                 messageDisplay: true
             }).commit( {
                 dotSize: 18,
                 detailId: "card-1",
-                message: "Learn everything so you can do anythin",
+                message: "Android Studio Set-Up",
+                image: "android-img",
                 messageDisplay: true
             }).commit({
                 dotSize: 18,
                 message: "Foooo to the bar is the best",
                 detailId: "card-2",
+                image: "file-pdf-img",
                 messageDisplay: true
             });
             var develop = gitgraph.branch("develop");

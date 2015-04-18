@@ -762,7 +762,7 @@
     this.parentCommit = options.parentCommit;
     this.x = options.x;
     this.y = options.y;
-    this.image = options.image || "img/wiki.png";
+    this.image = options.image || "wiki-img";
 
     this.parent.commits.push( this );
   }
@@ -788,7 +788,7 @@
     this.context.closePath();
 
     // Image
-    var img = document.getElementById("wiki-img");
+    var img = document.getElementById(this.image);
     //var img = document.createElement("img");
     //img.src = this.image;
     //img.width = this.dotSize;

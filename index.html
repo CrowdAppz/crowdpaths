@@ -24,7 +24,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
 
     <!-- Angular Material Javascript now available via Google CDN; version 0.8 used here -->
-    <script src="https://rawgit.com/angular/bower-material/master/angular-material.js"></script>
+    <script src="libs/angular-material.js"></script>
     <script src="libs/ng-text-truncate.js"></script>
     <script src="libs/pace.min.js"></script>
     <script src="libs/gitgraph.js"></script>
@@ -42,9 +42,6 @@
     <link rel="stylesheet" type="text/css" href="styles/app.css">
 
     <script>
-        $(document).ready(function () {
-            pathgraph.init();
-        });
         $(window).scroll(function () {
             var s = $(window).scrollTop(),
                     d = $(document).height(),
@@ -53,7 +50,6 @@
             var position = scrollPercent;
 
             $("#scroll-progress").css('width', position+'%');
-
         });
     </script>
 
@@ -78,8 +74,9 @@
 
 </div>
 <div id="content">
-    <canvas id="gitGraph" class="graph-canvas"></canvas>
-
+    <div class="mini-map">
+        <canvas id="gitGraph" class="graph-canvas"></canvas>
+    </div>
     <div id="card-container-wrapper">
         <div class="statistics-card card card-sizing" id="stats-card">
             <img class="card-image" src="img/Android1.png"/>
@@ -109,7 +106,6 @@
                 </div>
             </div>
         </div>
-
         <div class="card card-sizing" id="card-1">
             <div class="card-header">
                 <div class="card-header-avatar">
@@ -123,18 +119,8 @@
             </div>
 
             <div class="card-content">
-                <div class="video-container no-controls">
-                    <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1" frameborder="0" allowfullscreen></iframe>
-                </div>
+
                 <p style="margin-top: 10px" class="card-content-text">I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.</p>
@@ -145,8 +131,9 @@
                     <label class="card-action-complete-label" for="card-action-complete">Completed</label>
                 </p>
 
+            </div>
         </div>
-    </div>
+
         <div class="card card-sizing" id="card-2">
             <div class="card-header">
                 <div class="card-header-avatar">
@@ -163,13 +150,8 @@
                 <div class="video-container no-controls">
                     <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1" frameborder="0" allowfullscreen></iframe>
                 </div>
+
                 <p style="margin-top: 10px" class="card-content-text">I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
@@ -182,9 +164,10 @@
                     <label class="card-action-complete-label" for="card-action-complete">Completed</label>
                 </p>
 
-            </div>
         </div>
-        <div class="card card-sizing" id="card-3">
+    </div>
+
+        <div class="card card-sizing" id="card-1">
             <div class="card-header">
                 <div class="card-header-avatar">
                     <img src="/img/youtube-play.png" class="material-avatar"></div>
@@ -197,18 +180,8 @@
             </div>
 
             <div class="card-content">
-                <div class="video-container no-controls">
-                    <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <script async class="speakerdeck-embed" data-id="8389fd60a0e50130aa8066f78f5cbceb" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
                 <p style="margin-top: 10px" class="card-content-text">I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.</p>
@@ -221,81 +194,8 @@
 
             </div>
         </div>
-        <div class="card card-sizing" id="card-4">
-            <div class="card-header">
-                <div class="card-header-avatar">
-                    <img src="/img/youtube-play.png" class="material-avatar"></div>
-                <div class="card-header-info">
-                    <span class="card-header-title-big">Android is soo much fund</span>
-                    <span class="card-header-title card-location">Youtube - 3630 Completes</span>
-                    <!--<span class="card-header-title">This is a cool card</span>
-                    <span class="card-header-title card-location">veryyy nice</span>-->
-                </div>
-            </div>
 
-            <div class="card-content">
-                <div class="video-container no-controls">
-                    <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p style="margin-top: 10px" class="card-content-text">I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <p >
-                    <input type="checkbox" id="card-action-complete" checked="checked" />
-                    <label class="card-action-complete-label" for="card-action-complete">Completed</label>
-                </p>
-
-            </div>
-        </div>
-        <div class="card card-sizing" id="card-5">
-            <div class="card-header">
-                <div class="card-header-avatar">
-                    <img src="/img/youtube-play.png" class="material-avatar"></div>
-                <div class="card-header-info">
-                    <span class="card-header-title-big">Android is soo much fund</span>
-                    <span class="card-header-title card-location">Youtube - 3630 Completes</span>
-                    <!--<span class="card-header-title">This is a cool card</span>
-                    <span class="card-header-title card-location">veryyy nice</span>-->
-                </div>
-            </div>
-
-            <div class="card-content">
-                <div class="video-container no-controls">
-                    <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p style="margin-top: 10px" class="card-content-text">I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <p >
-                    <input type="checkbox" id="card-action-complete" checked="checked" />
-                    <label class="card-action-complete-label" for="card-action-complete">Completed</label>
-                </p>
-
-            </div>
-        </div>
-    <ul class="collapsible popout card-sizing" data-collapsible="accordion">
+        <ul class="collapsible popout card-sizing" data-collapsible="accordion">
         <li>
             <div class="collapsible-header active"><i class="mdi-image-filter-drama"></i>First</div>
             <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
@@ -332,6 +232,6 @@
 </body>
 </html>
 
-<script type="text/javascript">$(document).ready(function () {
-    $(".card-content-text").shorten({"showChars": 380});
-});</script>
+<!--<script type="text/javascript">$(document).ready(function () {-->
+    <!--$(".card-content-text").shorten({"showChars": 380});-->
+<!--});</script>-->

@@ -58,10 +58,6 @@ html, body {
     padding: 2rem;
 }
 
-.graph-canvas {
-    float: left;
-}
-
 .input-container {
     width: 70%;
     height: 100%;

@@ -8,41 +8,40 @@
                 orientation: "vertical",
                 mode: "compact"
             });
-
             var master = gitgraph.branch("master");
             master.commit({
                 dotSize: 18,
-                //detailId: "stats-card",
-                //message: "sc",
-                //messageDisplay: true
+                detailId: "stats-card",
+                message: "sc",
+                messageDisplay: true
             }).commit( {
                 dotSize: 18,
-                //detailId: "card-1",
-                //message: "1",
-                //messageDisplay: true
+                detailId: "card-1",
+                message: "1",
+                messageDisplay: true
             }).commit({
                 dotSize: 18,
-                //message: "2",
-                //detailId: "card-2",
-                //messageDisplay: true
+                message: "2",
+                detailId: "card-2",
+                messageDisplay: true
             });
             var develop = gitgraph.branch("develop");
             develop.commit({
                 dotSize: 18,
-                //message: "3",
-                //detailId: "card-3",
-                //messageDisplay: true
+                message: "3",
+                detailId: "card-3",
+                messageDisplay: true
             }).commit({
                 dotSize: 18,
-                //message: "4",
-                //detailId: "card-4",
-                //messageDisplay: true
+                message: "4",
+                detailId: "card-4",
+                messageDisplay: true
             });
             master.commit({
                 dotSize: 18,
-                //message: "5",
-                //detailId: "card-5",
-                //messageDisplay: true
+                message: "5",
+                detailId: "card-5",
+                messageDisplay: true
             });
 
             global.gitgraph = gitgraph;
@@ -51,9 +50,7 @@
         },
         bindCanvasClick: function () {
             var graphCanvas = $("#gitGraph")[0];
-            console.log("foo: ", $("#gitGraph"));
             $("#gitGraph").on("click", function (event) {
-                global.eve = event;
                 var x = event.originalEvent.pageX - graphCanvas.offsetLeft - global.gitgraph.marginX;
                 var y = event.originalEvent.pageY - graphCanvas.offsetTop - global.gitgraph.marginY;
                 var i, commit;

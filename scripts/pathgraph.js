@@ -18,7 +18,7 @@
                 dotColor: "#00ff00",
                 message: "2",
                 detailId: "card-2"
-            }); // 3 commits upon HEAD
+            });
             gitgraph.branch("develop").commit({
                 message: "3",
                 detailId: "card-3"

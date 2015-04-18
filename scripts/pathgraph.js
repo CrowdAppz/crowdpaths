@@ -12,34 +12,34 @@
             master.commit({
                 dotSize: 18,
                 detailId: "stats-card",
-                message: "sc",
+                message: "Android: From Zero to Hero",
                 messageDisplay: true
             }).commit( {
                 dotSize: 18,
                 detailId: "card-1",
-                message: "1",
+                message: "Learn everything so you can do anythin",
                 messageDisplay: true
             }).commit({
                 dotSize: 18,
-                message: "2",
+                message: "Foooo to the bar is the best",
                 detailId: "card-2",
                 messageDisplay: true
             });
             var develop = gitgraph.branch("develop");
             develop.commit({
                 dotSize: 18,
-                message: "3",
+                message: "Funny texts are funny so am I",
                 detailId: "card-3",
                 messageDisplay: true
             }).commit({
                 dotSize: 18,
-                message: "4",
+                message: "I have no idea what to write here so foooo",
                 detailId: "card-4",
                 messageDisplay: true
             });
             master.commit({
                 dotSize: 18,
-                message: "5",
+                message: "Lorem ipsum dolor sit amet lorem ipsum dolor",
                 detailId: "card-5",
                 messageDisplay: true
             });

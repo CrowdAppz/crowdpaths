@@ -60,23 +60,35 @@
         </nav>
     </div>
     <div id="card-container-wrapper">
-        <div class="card">
+        <div class="statistics-card card">
             <div class="card-content">
-                <div><i class="statistics-icon mdi-device-access-time"></i>{{::durationTime}}</div>
-                <div><i class="statistics-icon mdi-action-account-child"></i>{{::usersCompleted}}</div>
+                <div class="statistics-card-title">Android Tutorial</div>
+                <span class="statistics-item"><i class="statistics-icon mdi-device-access-time"></i> <span
+                        class="statistics-text">{{::durationTime}}</span></span>
+                <span class="statistics-item"><i class="statistics-icon mdi-action-account-child"></i><span
+                        class="statistics-text">{{::usersCompleted}}</span></span>
+                <span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span
+                        class="statistics-text">{{::pathRating}}</span></span>
+                <span class="statistics-item"><i class="statistics-icon mdi-communication-call-split"></i><span
+                        class="statistics-text">{{::numberAlternativePaths}}</span></span>
+
+                <div class="statistics-card-description white-text">Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </div>
             </div>
         </div>
-</div>
-<div class="card">
+
+        <div class="card">
             <div class="card-header">
                 <div class="card-header-avatar">
-                    <img src="\img\youtube-play.png"   class="material-avatar"></div>
+                    <img src="\img\youtube-play.png" class="material-avatar"></div>
                 <div class="card-header-info">
-                    <span  class="card-header-title">This is a cool card</span>
+                    <span class="card-header-title">This is a cool card</span>
                     <span class="card-header-title card-location">veryyy nice</span>
                 </div>
             </div>
-
             <div class="card-content">
                 <div class="card-body-title">Android is soo much fund</div>
                 <p>I am a very simple card. I am good at containing small bits of information.

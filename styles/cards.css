@@ -4,8 +4,37 @@
     min-width: 20rem;
     margin: 2.5rem auto;
 }
+
+.statistics-card {
+    background-color: #0288D1; !important;
+}
+
+.statistics-card-title {
+    margin-bottom: 0.5rem;
+    line-height: 48px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #FDD835;
+    font-size: 20px;
+
+}
+
 .statistics-icon {
-    margin-right: 1rem;
+    margin-right: 0.2rem;
+    font-size: 24px;
+    vertical-align: middle;
+    color: #FDD835;
+}
+
+.statistics-text {
+    margin-right: 2rem;
+    color: #FDD835;
+}
+
+.statistics-card-description {
+    margin-top: 1rem;
 }
 
 .card-header {
@@ -20,10 +49,12 @@
     display: inline-block;
     float: left;
 }
+
 .card-header-info {
     display: inline-block;
     margin-top: 1px;
 }
+
 .card-header-title {
     font-size: 15px;
     font-weight: 500;

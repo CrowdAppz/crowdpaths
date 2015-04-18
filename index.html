@@ -1,6 +1,6 @@
-<html ng-app="praxismarket">
+<html ng-app="crowdpaths">
 <head>
-    <title>Praxis Market - HS Karlsruhe</title>
+    <title>Crowd Paths</title>
 
     <meta charset="UTF-8">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />-->
@@ -22,18 +22,28 @@
     <script src="https://rawgit.com/angular/bower-material/master/angular-material.js"></script>
     <script src="libs/ng-text-truncate.js"></script>
     <script src="libs/pace.min.js"></script>
+    <script src="libs/gitgraph.js"></script>
 
     <!-- Include all your script files here -->
     <script src="scripts/module.js"></script>
     <script src="scripts/communicator.js"></script>
+    <script src="scripts/pathgraph.js"></script>
 
     <!-- Add styles -->
+    <link rel="stylesheet" type="text/css" href="styles/gitgraph.css">
     <link rel="stylesheet" type="text/css" href="styles/cards.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/app.css">
 
+    <script>
+        $(document).ready(function () {
+            pathgraph.init();
+        });
+    </script>
+
 </head>
 <body ng-controller="MainController" layout="row">
+    <canvas id="gitGraph"></canvas>
 
 </body>
 </html>

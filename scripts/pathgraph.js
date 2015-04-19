@@ -68,14 +68,14 @@
             }).commit({
                 dotSize: 18,
                 message: "Implementing Material Design in your App",
-                detailId: "card-4",
+                detailId: "card-6",
                 messageDisplay: true,
                 image: "img/android.png"
             });
             design.merge(master, {
                 dotSize: 18,
                 message: "Android Debugging",
-                detailId: "card-5",
+                detailId: "card-7",
                 messageDisplay: true,
                 image: "img/vogella.png",
                 dotColor: primaryColor,
@@ -85,7 +85,7 @@
             master.commit({
                 dotSize: 18,
                 message: "Android Testing",
-                detailId: "card-2",
+                detailId: "card-8",
                 image: "img/presentation.png",
                 messageDisplay: true,
                 dotColor: primaryColor,
@@ -96,14 +96,14 @@
             game.commit({
                 dotSize: 18,
                 message: "Chapter 9 - Building the Game",
-                detailId: "card-2",
+                detailId: "card-9",
                 image: "img/file-pdf.png",
                 messageDisplay: true
             });
             master.commit({
                 dotSize: 18,
                 message: "Note App 1",
-                detailId: "card-2",
+                detailId: "card",
                 image: "img/wiki.png",
                 messageDisplay: true,
                 dotColor: primaryColor,
@@ -113,14 +113,14 @@
             game.commit({
                 dotSize: 18,
                 message: "Install and Use Android Play Game Services",
-                detailId: "card-2",
+                detailId: "card-10",
                 image: "img/gamepad-variant.png",
                 messageDisplay: true
             });
             master.commit({
                 dotSize: 18,
                 message: "Note App 2",
-                detailId: "card-2",
+                detailId: "card",
                 image: "img/file-pdf.png",
                 messageDisplay: true,
                 dotColor: primaryColor,
@@ -130,7 +130,7 @@
             game.merge(master, {
                 dotSize: 18,
                 message: "How to get rich with Crap - Release your App!",
-                detailId: "card-2",
+                detailId: "card-11",
                 image: "img/google-play.png",
                 messageDisplay: true,
                 dotColor: primaryColor,

@@ -764,6 +764,7 @@
         this.detailId = options.detailId;
 
         this.parent.commits.push(this);
+        this.isActivated = false;
     }
 
     /**
@@ -833,6 +834,7 @@
     };
 
     Commit.prototype.activate = function () {
+        this.isActivated = true;
         // Dot
         this.context.beginPath();
         this.context.arc(this.x, this.y, this.dotSize + 1, 0, 2 * Math.PI, false);
@@ -872,6 +874,7 @@
     };
 
     Commit.prototype.deactivate = function () {
+        this.isActivated = false;
         // Dot
         this.context.beginPath();
         this.context.arc(this.x, this.y, this.dotSize + 1, 0, 2 * Math.PI, false);

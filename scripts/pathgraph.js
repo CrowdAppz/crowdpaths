@@ -145,8 +145,12 @@
         bindCanvasClick: function () {
             var graphCanvas = $("#gitGraph")[0];
             $("#gitGraph").on("click", function (event) {
-                var x = event.originalEvent.pageX - graphCanvas.offsetParent.offsetLeft - graphCanvas.offsetLeft - global.gitgraph.marginX;
-                var y = event.originalEvent.pageY - graphCanvas.offsetParent.offsetTop - graphCanvas.offsetTop - global.gitgraph.marginY;
+                global.ev = event;
+                console.log("orig x: " + event.originalEvent.pageX + " | " + event.originalEvent.pageY);
+                //var x = event.originalEvent.pageX - graphCanvas.offsetParent.offsetLeft - graphCanvas.offsetLeft - global.gitgraph.marginX;
+                var x = event.clientX - graphCanvas.offsetParent.offsetLeft - graphCanvas.offsetLeft - global.gitgraph.marginX;
+                //var y = event.originalEvent.pageY - graphCanvas.offsetParent.offsetTop - graphCanvas.offsetTop - global.gitgraph.marginY;
+                var y = event.clientY - graphCanvas.offsetParent.offsetTop - graphCanvas.offsetTop - global.gitgraph.marginY;
                 var i, commit;
 
                 for(i = 0; i < global.gitgraph.commits.length; i++) {
@@ -157,9 +161,10 @@
                     var right = commit.x + commit.dotSize;
                     //console.log("x: " + x + " | y: " + y + " / top: " + top
                     //    + " | bottom: " + bottom + " | left: " + left + " | right: " + right);
-                    if ((y > top && y < bottom) && (x > left && x < right )) {
+                    if ((y >= top && y <= bottom) && (x >= left && x <= right )) {
                         console.log("clicked on commit: " + commit.message + " (" + commit.detailId + ")");
-                        $("html, body").animate({ scrollTop: $("#" + commit.detailId).offset().top - 140 }, 1000);
+                        //$("html, body").animate({ scrollTop: $("#" + commit.detailId).offset().top - 140 }, 1000);
+                        $("#" + commit.detailId).animatedScroll({easing: "easeOutExpo"}, {left: "0", top: "320px"});
                     }
                 }
             });

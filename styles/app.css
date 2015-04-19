@@ -137,3 +137,14 @@ html, body {
 #search-icon.focus {
     color: #666 !important;
 }
+
+.footer {
+    color: #888;
+    padding: 1rem;
+    font-family: Roboto;
+    font-weight: 300;
+    text-align: center;
+}
+.heart-icon {
+    color: #E57373;
+}

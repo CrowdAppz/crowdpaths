@@ -165,6 +165,9 @@
             });
         },
         highlightNodeByCard: function(card) {
+            if($(card).hasClass("hidden")) {
+                return;
+            }
             var id = card.id;
             var i, commit;
             for(i = 0; i < global.gitgraph.commits.length; i++) {

@@ -291,7 +291,7 @@
             </div>
         </div>
 
-        <div class="card card-sizing" id="card-6">
+        <div class="card card-sizing path-material hidden" id="card-6">
             <div class="card-header">
                 <div class="card-header-avatar">
                     <img src="/img/android.png" class="material-avatar material-avatar-material"></div>
@@ -465,7 +465,7 @@
             </div>
         </div>
 
- <div class="card card-sizing" id="card-11">
+        <div class="card card-sizing" id="card-11">
             <div class="card-header">
                 <div class="card-header-avatar">
                     <img src="/img/google-play.png" class="material-avatar"></div>
@@ -478,7 +478,11 @@
             </div>
 
             <div class="card-content">
-                <p class="card-content-text">Once the app is built, it is crucial that it is marketed well. Marketing the app however should have a tasteful budget allocated to it, because a lot depends on it. Though there are a lot of do’s and don’t that one need to remember, a good app will scale well if it has made the right impact on tech blogs, social media and, of course, the press. Though all this may sound daunting, this article by Smashing Magazine has got it sorted for you.</a></p>
+                <p class="card-content-text">Once the app is built, it is crucial that it is marketed well. Marketing
+                    the app however should have a tasteful budget allocated to it, because a lot depends on it. Though
+                    there are a lot of do’s and don’t that one need to remember, a good app will scale well if it has
+                    made the right impact on tech blogs, social media and, of course, the press. Though all this may
+                    sound daunting, this article by Smashing Magazine has got it sorted for you.</a></p>
             </div>
 
             <div class="card-action">
@@ -489,26 +493,27 @@
                 <a target="_blank"
                    href="http://www.appvirality.com/blog/plan-mobile-app-budget-6-easy-steps/"
                    class="card-footer-button">Open Blog</a>
-            </div>    </div>
+            </div>
+        </div>
 
-    <div class="fixed-action-btn" style="bottom: 32px; right: 32px;">
-        <a class="btn-floating btn-large orange accent-4">
-            <i class="large mdi-content-add"></i>
-        </a>
-        <ul>
-            <li><a class="btn-floating red"><i class="large mdi-editor-insert-chart"></i></a></li>
-            <li><a class="btn-floating yellow darken-1"><i class="large mdi-editor-format-quote"></i></a></li>
-            <li><a class="btn-floating green"><i class="large mdi-editor-publish"></i></a></li>
-            <li><a class="btn-floating blue"><i class="large mdi-editor-attach-file"></i></a></li>
-        </ul>
+        <div class="fixed-action-btn" style="bottom: 32px; right: 32px;">
+            <a class="btn-floating btn-large orange accent-4">
+                <i class="large mdi-content-add"></i>
+            </a>
+            <ul>
+                <li><a class="btn-floating red"><i class="large mdi-editor-insert-chart"></i></a></li>
+                <li><a class="btn-floating yellow darken-1"><i class="large mdi-editor-format-quote"></i></a></li>
+                <li><a class="btn-floating green"><i class="large mdi-editor-publish"></i></a></li>
+                <li><a class="btn-floating blue"><i class="large mdi-editor-attach-file"></i></a></li>
+            </ul>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                pathgraph.init();
+            });
+        </script>
     </div>
-
-    <script>
-        $(document).ready(function () {
-            pathgraph.init();
-        });
-    </script>
-</div>
 </body>
 </html>
 

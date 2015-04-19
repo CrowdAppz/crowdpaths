@@ -28,6 +28,12 @@ angular.module('crowdpaths', [])
                 }
                 //$(".path-material").addClass("show");
             }
+            else if (path === 'gaming') {
+                if ($(".path-gaming").hasClass("hidden")) {
+                    $(".path-gaming").removeClass("hidden");
+                    $("#" + id).text("HIDE CONTENT");
+                }
+            }
         }
 
 

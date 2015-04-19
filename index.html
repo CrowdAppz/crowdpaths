@@ -160,7 +160,10 @@
             </div>
 
             <div class="card-content">
-                <p class="card-content-text">This class teaches you how to build your first Android app. You’ll learn how to create an Android project and run a debuggable version of the app. You'll also learn some fundamentals of Android app design, including how to build a simple user interface and handle user input.</a></p>
+                <p class="card-content-text">This class teaches you how to build your first Android app. You’ll learn
+                    how to create an Android project and run a debuggable version of the app. You'll also learn some
+                    fundamentals of Android app design, including how to build a simple user interface and handle user
+                    input.</a></p>
             </div>
 
             <div class="card-action">
@@ -193,7 +196,10 @@
                     <iframe width="853" height="480" src="https://www.youtube.com/embed/XwGHJJYBs0Q?rel=0;autohide=1"
                             frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p style="margin-top: 10px" class="card-content-text">An app is useless if people can't find their way around it. Android introduced big navigation-support changes in 3.0 and 4.0. The Action Bar offers a convenient control for Up navigation, the Back key's behavior became more consistent within tasks, and the Recent Tasks UI got an overhaul.</p>
+                <p style="margin-top: 10px" class="card-content-text">An app is useless if people can't find their way
+                    around it. Android introduced big navigation-support changes in 3.0 and 4.0. The Action Bar offers a
+                    convenient control for Up navigation, the Back key's behavior became more consistent within tasks,
+                    and the Recent Tasks UI got an overhaul.</p>
             </div>
 
             <div class="card-action">
@@ -299,7 +305,11 @@
 
             <div class="card-content">
                 <img src="/img/material-design.jpg" class="card-content-img"/>
-                <p class="card-content-text">Material design is a comprehensive approach to visual, interaction and motion design for the multi-screen world. Android 5.0 Lollipop and the updated support libraries help you to create material UIs. Here’s a rundown of some of the major elements of material design and the APIs and widgets that you can use to implement them in your app.</a></p>
+
+                <p class="card-content-text">Material design is a comprehensive approach to visual, interaction and
+                    motion design for the multi-screen world. Android 5.0 Lollipop and the updated support libraries
+                    help you to create material UIs. Here’s a rundown of some of the major elements of material design
+                    and the APIs and widgets that you can use to implement them in your app.</a></p>
             </div>
 
             <div class="card-action">
@@ -350,7 +360,11 @@
             </div>
 
             <div class="card-content">
-                <p class="card-content-text">This tutorial describes how to debug Android applications. If you develop Android applications you can debug them via Eclipse. To enable debugging an a real Android device you need to add the android:debuggable="true" flag to the application segment in your AndroidManifest.xml file. The ADT tooling sets this flag automatically for debug builds based on the constant DEBUG of the BuildConfig class. This class is automatically updated by the ADT.</a></p>
+                <p class="card-content-text">This tutorial describes how to debug Android applications. If you develop
+                    Android applications you can debug them via Eclipse. To enable debugging an a real Android device
+                    you need to add the android:debuggable="true" flag to the application segment in your
+                    AndroidManifest.xml file. The ADT tooling sets this flag automatically for debug builds based on the
+                    constant DEBUG of the BuildConfig class. This class is automatically updated by the ADT.</a></p>
             </div>
 
             <div class="card-action">
@@ -364,7 +378,29 @@
             </div>
         </div>
 
-        <div class="card card-sizing" id="card-9">
+        <ul class="collapsible popout card-sizing" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header active"><i class="mdi-action-list"></i>Build: Productivity App
+                </div>
+                <div class="collapsible-body"><p>Your first app will help you with your productivity: a note
+                    app.
+                    <a target="_blank" href=""
+                       id="showProductivityButton"
+                       ng-click="showContent('productivity', 'showProductivityButton')"
+                       class="path-switch-button">SHOW CONTENT</a>
+                </p></div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="mdi-av-games"></i>Build: Gaming App</div>
+                <div class="collapsible-body"><p>Your first app will be a small, nifty game!
+                    <a target="_blank" href=""
+                       id="showGamingButton"
+                       ng-click="showContent('gaming', 'showGamingButton')"
+                       class="path-switch-button">SHOW CONTENT</a></p></div>
+            </li>
+        </ul>
+
+            <div class="card card-sizing path-gaming hidden" id="card-9">
             <div class="card-header">
                 <div class="card-header-avatar">
                     <img src="/img/file-pdf.png" class="material-avatar material-avatar-games"></div>
@@ -395,7 +431,7 @@
             </div>
         </div>
 
-        <div class="card card-sizing" id="card-10">
+        <div class="card card-sizing path-gaming hidden" id="card-10">
             <div class="card-header">
                 <div class="card-header-avatar">
                     <img src="/img/presentation.png" class="material-avatar material-avatar-games"></div>
@@ -406,8 +442,20 @@
             </div>
 
             <div class="card-content">
-                <iframe style="height: 358px;" class="card-content-img" src="//www.slideshare.net/slideshow/embed_code/key/2ZX4wSVBGqP2fX" width="424" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-                <p class="card-content-text">Make your games social with Google Play game services. Add achievements, leaderboards, real-time multiplayer, and other popular features using the Google Play game services SDK. Let players sign in using their Google+ identities and share their gaming experience with friends. The Play Game services SDK provides cross-platform Game services that lets you easily integrate popular gaming features such as achievements, leaderboards, Saved Games, and real-time multiplayer in your tablet and mobile games. This training will guide you to install a sample game application for Android and quickly get started to create your own Android game. The Number Challenge sample app demonstrates how you can integrate achievements and leaderboards into your game.</p>
+                <iframe style="height: 358px;" class="card-content-img"
+                        src="//www.slideshare.net/slideshow/embed_code/key/2ZX4wSVBGqP2fX" width="424" height="355"
+                        frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                        style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;"
+                        allowfullscreen></iframe>
+                <p class="card-content-text">Make your games social with Google Play game services. Add achievements,
+                    leaderboards, real-time multiplayer, and other popular features using the Google Play game services
+                    SDK. Let players sign in using their Google+ identities and share their gaming experience with
+                    friends. The Play Game services SDK provides cross-platform Game services that lets you easily
+                    integrate popular gaming features such as achievements, leaderboards, Saved Games, and real-time
+                    multiplayer in your tablet and mobile games. This training will guide you to install a sample game
+                    application for Android and quickly get started to create your own Android game. The Number
+                    Challenge sample app demonstrates how you can integrate achievements and leaderboards into your
+                    game.</p>
             </div>
             <div class="card-action">
                 <p>

@@ -16,11 +16,19 @@ html, body {
 }
 
 #toolbar {
-    background-color: #01579B;
+    background-color: #185F72;
     witdh: 100%;
     margin-bottom: 2rem;
     position: fixed;
     z-index: 100;
+}
+
+#toolbar-search {
+    background-color: #015290;
+    top: 0px;
+    left: 20rem;
+    width: 20rem;
+    position: fixed;
 }
 
 #toolbar-container {
@@ -50,7 +58,82 @@ html, body {
     padding: 2rem;
 }
 
-.graph-canvas {
+.input-container {
+    width: 70%;
+    height: 100%;
+    top: 0px;
+    left: 20rem;
+    position: absolute;
+}
+.determinate {
+    background-color: #FF6D00 !important;
+}.progress{
+    background-color: #acece6;
+}
+.search-input-wrapper{
+    /*background-color: #7986CB; !important;*/
+    /*width: 100%;*/
+    /*padding: 4px 4px 4px 40px;*/
+    /*border: 0;*/
+    /*color: white;*/
+    /*font-weight: 100;*/
+    /*margin-top: 20px;*/
+    /*outline: none;*/
+}
+
+#search-input {
+    background-color: #277286; !important;
+    width: 100%;
+    /*padding: 4px 4px 4px 40px;*/
+    padding: 0px 0px 0px 32px;
+    border: 0;
+    color: white;
+    font-weight: 100;
+    margin-top: 18px;
+    outline: none;
+    font-size: 18px;
+}
+
+#search-input:focus {
+    background-color: white;
+    color: #666;
+    outline: none;
+    font-weight: 400;
+}
+
+#search-input::-webkit-input-placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: 100;
+}
+
+#search-input:-moz-placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: 100;
+}
+
+#search-input::-moz-placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: 100;
+}
+
+#search-input:-ms-input-placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: 100;
+}
+
+#search-icon {
+    color: white !important;
     float: left;
-    margin-left: 27rem;
+
+    position: relative;
+    top: -61px;
+    left: 8px;
+}
+
+#search-icon.focus {
+    color: #666 !important;
 }

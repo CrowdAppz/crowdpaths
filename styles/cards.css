@@ -4,12 +4,42 @@
     min-width: 20rem;
     margin: 2.5rem auto;
 }
-.progress{
+
+.card-title-link {
+    text-decoration: none;
+    color: #185F72;
+}
+
+.card-image {
+    height: 215px;
+    max-width: 192px;
+    float: left;
+    background-color: white;
+    margin-right: 2rem;
+    padding: 3rem;
+    background-color: #185F72;
+}
+.card-content-img {
+    float: left;
+    height: 130px;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+.progress {
     height: 3px;
     margin: 0px;
+    background-color: rgb(24, 95, 114) !important;
 }
+
 .statistics-card {
-    background-color: #0288D1; !important;
+    /*background-color: #185F72;*/
+/*!important;*/
+    background-color: white;
+}
+
+.startpage-statistics-card {
+    background-color: white;
+    margin-bottom: 3rem;
 }
 
 .statistics-card-title {
@@ -19,7 +49,8 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    color: #FDD835;
+    /*color: #47FFFB;*/
+    color: #185F72;
     font-size: 20px;
 
 }
@@ -28,12 +59,22 @@
     margin-right: 0.2rem;
     font-size: 24px;
     vertical-align: middle;
-    color: #FDD835;
+    /*color: #47FFFB;*/
+    color: #185F72;
+}
+
+.startpage-statistics-icon {
+    color: #185F72;
 }
 
 .statistics-text {
     margin-right: 2rem;
-    color: #FDD835;
+    /*color: #FFFFFF;*/
+    color: black;
+}
+
+.startpage-statistics-text {
+    color: black;
 }
 
 .statistics-card-description {
@@ -53,11 +94,12 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    color: #a6ece9;
+    color: #185F72;
     font-size: 20px;
     float: left;
     clear: both;
 }
+
 .card-header-avatar {
     display: inline-block;
     float: left;
@@ -82,13 +124,15 @@
 .card-location {
     font-weight: 400;
     font-size: 13px;
-    width: 200px;
+    width: 280px;
 }
+
 .card-action {
     position: relative;
     padding-bottom: 16px;
     padding-top: 16px;
 }
+
 .card-body-title {
     margin-bottom: 0.5rem;
     line-height: 48px;
@@ -96,7 +140,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    color: #a6ece9;
+    color: #185F72;
     font-size: 20px;
 }
 
@@ -108,14 +152,36 @@
     border-radius: 50%;
     box-sizing: content-box;
     padding: 8px;
-    background-color: rgba(28, 208, 142, 0.4);
-    border: 1px solid #C7F3E5;
+    background-color: #185F72;
+    border: 1px solid #185F72;
     box-shadow: 0 0 1px #9D9D9D;
 }
+
+.material-avatar-games {
+    background-color: #F1C109;
+    border: 1px solid #F1C109;
+}
+
+.material-avatar-material {
+    background-color: #008FB5;
+    border: 1px solid #008FB5;
+}
+
+
+
 .card-footer-button {
     float: right;
     line-height: 140%;
     margin: 0;
+    margin-top: -22px;
+    color: #ff6d00 !important;
+}
+
+.path-switch-button{
+    float: right;
+    line-height: 140%;
+    margin: 0;
+    color: #ff6d00 !important;
 }
 
 .card-action-complete-label {
@@ -127,12 +193,34 @@
     color: #737373;
 }
 
-.starrating-wrapper{
+.starrating-wrapper {
     margin-left: -9px;
 }
 
-.starrating{
+.starrating {
     margin-right: -14px;
     padding: 0;
     font-size: 32px;
+}
+
+.path-material {
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}
+
+.show {
+    visibility: visible;
+    display: block;
+}
+.alternate-path-header-icon {
+    width: 3.0rem;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-right: 1rem;
 }

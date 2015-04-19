@@ -6,6 +6,7 @@ angular.module('crowdpaths', [])
         $scope.pathRating = 5;
         $scope.numberAlternativePaths = 3;
         $scope.searchQuery;
+        $scope.checkBox1;
 
         $scope.focus = function () {
             console.log("focus");
@@ -33,6 +34,16 @@ angular.module('crowdpaths', [])
                     $(".path-gaming").removeClass("hidden");
                     $("#" + id).text("HIDE CONTENT");
                 }
+            }
+        }
+
+        $scope.checkboxClick = function(inputId, labelId){
+            console.log($("#"+inputId).is(':checked'));
+            if(!$("#"+inputId).is(':checked')){
+                $("#"+labelId).text("Complete");
+            }
+            else{
+                $("#"+labelId).text("Completed");
             }
         }
 

@@ -16,6 +16,13 @@ angular.module('crowdpaths', [])
             angular.element(document.getElementById('search-icon')).removeClass("focus");
         }
 
+        $scope.showContent = function(path){
+            if(path === 'material'){
+                $(".path-material").removeClass("hidden");
+                //$(".path-material").addClass("show");
+            }
+        }
+
 
         $scope.startPageContent = [
             {

@@ -168,14 +168,25 @@
             if($(card).hasClass("hidden")) {
                 return;
             }
+
             var id = card.id;
+            var shouldUpdate = false;
             var i, commit;
             for(i = 0; i < global.gitgraph.commits.length; i++) {
                 commit = global.gitgraph.commits[i];
-                if(commit.detailId === id) {
-                    commit.activate();
-                } else {
-                    commit.deactivate();
+                if(commit.detailId === id && commit.isActivated === false) {
+                    shouldUpdate = true;
+                }
+            }
+
+            if(shouldUpdate === true) {
+                for(i = 0; i < global.gitgraph.commits.length; i++) {
+                    commit = global.gitgraph.commits[i];
+                    if(commit.detailId === id) {
+                        commit.activate();
+                    } else {
+                        commit.deactivate();
+                    }
                 }
             }
         }

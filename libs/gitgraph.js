@@ -413,9 +413,7 @@
         // Options with auto value
         this.offsetX = this.column * this.spacingX;
         this.offsetY = this.column * this.spacingY;
-
         this.color = options.color || this.template.branch.color || this.template.colors[this.column];
-
         // Checkout on this new branch
         this.checkout();
     }
@@ -834,6 +832,83 @@
         }
     };
 
+    Commit.prototype.activate = function () {
+        // Dot
+        this.context.beginPath();
+        this.context.arc(this.x, this.y, this.dotSize + 1, 0, 2 * Math.PI, false);
+        this.context.fillStyle = "#ffffff";
+        this.context.strokeStyle = "#ffffff";
+        this.context.lineWidth = "#ffffff";
+
+        if (typeof (this.dotStrokeWidth) === "number") {
+            this.context.stroke();
+        }
+
+        this.context.fill();
+        this.context.closePath();
+
+
+        // Dot
+        this.context.beginPath();
+        this.context.arc(this.x, this.y, this.dotSize, 0, 2 * Math.PI, false);
+        this.context.fillStyle = "#ff6d00";
+        this.context.strokeStyle = "#ff6d00";
+        this.context.lineWidth = "#ff6d00";
+
+        if (typeof (this.dotStrokeWidth) === "number") {
+            this.context.stroke();
+        }
+
+        this.context.fill();
+        this.context.closePath();
+
+        var img = new Image();   // Create new img element
+        var self = this;
+        img.onload = function () {
+            var half = self.dotSize / 2;
+            self.context.drawImage(img, (self.x - half), (self.y - half), self.dotSize, self.dotSize);
+        };
+        img.src = this.image;
+    };
+
+    Commit.prototype.deactivate = function () {
+        // Dot
+        this.context.beginPath();
+        this.context.arc(this.x, this.y, this.dotSize + 1, 0, 2 * Math.PI, false);
+        this.context.fillStyle = "#ffffff";
+        this.context.strokeStyle = "#ffffff";
+        this.context.lineWidth = "#ffffff";
+
+        if (typeof (this.dotStrokeWidth) === "number") {
+            this.context.stroke();
+        }
+
+        this.context.fill();
+        this.context.closePath();
+
+        // Dot
+        this.context.beginPath();
+        this.context.arc(this.x, this.y, this.dotSize, 0, 2 * Math.PI, false);
+        this.context.fillStyle = this.dotColor;
+        this.context.strokeStyle = this.dotStrokeColor;
+        this.context.lineWidth = this.dotStrokeWidth;
+
+        if (typeof (this.dotStrokeWidth) === "number") {
+            this.context.stroke();
+        }
+
+        this.context.fill();
+        this.context.closePath();
+
+        var img = new Image();   // Create new img element
+        var self = this;
+        img.onload = function () {
+            var half = self.dotSize / 2;
+            self.context.drawImage(img, (self.x - half), (self.y - half), self.dotSize, self.dotSize);
+        };
+        img.src = this.image;
+    };
+
     /**
      * Render a arrow before commit
      *
@@ -931,7 +1006,7 @@
         options.commit.message = options.commit.message || {};
 
         // One color per column
-        this.colors = options.colors || ["#6963FF", "#47E8D4", "#6BDB52", "#E84BA5", "#FFA657"];
+        this.colors = options.colors || ["#185F72", "#47E8D4", "#6BDB52", "#E84BA5", "#FFA657"];
 
         // Branch style
         this.branch = {};
@@ -1020,7 +1095,7 @@
             /* falls through */
             default:
                 template = {
-                    colors: ["#979797", "#008fb5", "#f1c109"],
+                    colors: ["#185F72", "#008fb5", "#f1c109"],
                     branch: {
                         lineWidth: 5,
                         spacingX: 50

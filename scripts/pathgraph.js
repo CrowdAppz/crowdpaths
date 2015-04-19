@@ -8,43 +8,61 @@
                 orientation: "vertical",
                 mode: "compact"
             });
-            var master = gitgraph.branch("master");
+            var primaryColor = "#185F72";
+            var master = gitgraph.branch("master", {
+                color: primaryColor
+            });
             master.commit({
                 dotSize: 18,
                 detailId: "stats-card",
                 message: "Android: From Zero to Hero",
                 image: "img/flag-checkered.png",
-                messageDisplay: true
+                messageDisplay: true,
+                dotColor: primaryColor,
+                dotStrokeColor: primaryColor,
+                color: primaryColor
             }).commit( {
                 dotSize: 18,
                 detailId: "card-1",
                 message: "Android Studio Set-Up",
                 image: "img/coursera.png",
-                messageDisplay: true
+                messageDisplay: true,
+                dotColor: primaryColor,
+                dotStrokeColor: primaryColor,
+                color: primaryColor
             }).commit({
                 dotSize: 18,
                 message: "Building your first Hello World App",
                 detailId: "card-2",
                 image: "img/android.png",
-                messageDisplay: true
+                messageDisplay: true,
+                dotColor: primaryColor,
+                dotStrokeColor: primaryColor,
+                color: primaryColor
             }).commit({
                 dotSize: 18,
                 message: "Activity Lifecycle - Google IO",
-                detailId: "card-2",
+                detailId: "card-3",
                 image: "img/presentation.png",
-                messageDisplay: true
+                messageDisplay: true,
+                dotColor: primaryColor,
+                dotStrokeColor: primaryColor,
+                color: primaryColor
             }).commit({
                 dotSize: 18,
                 message: "Rich and Responsive Layouts (Lesson 5)",
-                detailId: "card-2",
+                detailId: "card-4",
                 image: "img/udacity.png",
-                messageDisplay: true
-            })
+                messageDisplay: true,
+                dotColor: primaryColor,
+                dotStrokeColor: primaryColor,
+                color: primaryColor
+            });
             var design = gitgraph.branch("material-design");
             design.commit({
                 dotSize: 18,
                 message: "Introduction to Material Design",
-                detailId: "card-3",
+                detailId: "card-5",
                 messageDisplay: true,
                 image: "img/youtube-play.png"
             }).commit({
@@ -59,14 +77,20 @@
                 message: "Android Debugging",
                 detailId: "card-5",
                 messageDisplay: true,
-                image: "img/vogella.png"
+                image: "img/vogella.png",
+                dotColor: primaryColor,
+                dotStrokeColor: primaryColor,
+                color: primaryColor
             });
             master.commit({
                 dotSize: 18,
                 message: "Android Testing",
                 detailId: "card-2",
                 image: "img/presentation.png",
-                messageDisplay: true
+                messageDisplay: true,
+                dotColor: primaryColor,
+                dotStrokeColor: primaryColor,
+                color: primaryColor
             });
             var game = gitgraph.branch("game-dev");
             game.commit({
@@ -81,7 +105,10 @@
                 message: "Note App 1",
                 detailId: "card-2",
                 image: "img/wiki.png",
-                messageDisplay: true
+                messageDisplay: true,
+                dotColor: primaryColor,
+                dotStrokeColor: primaryColor,
+                color: primaryColor
             });
             game.commit({
                 dotSize: 18,
@@ -95,14 +122,20 @@
                 message: "Note App 2",
                 detailId: "card-2",
                 image: "img/file-pdf.png",
-                messageDisplay: true
+                messageDisplay: true,
+                dotColor: primaryColor,
+                dotStrokeColor: primaryColor,
+                color: primaryColor
             });
             game.merge(master, {
                 dotSize: 18,
                 message: "How to get rich with Crap - Release your App!",
                 detailId: "card-2",
                 image: "img/google-play.png",
-                messageDisplay: true
+                messageDisplay: true,
+                dotColor: primaryColor,
+                dotStrokeColor: primaryColor,
+                color: primaryColor
             });
 
             global.gitgraph = gitgraph;
@@ -130,12 +163,27 @@
                     }
                 }
             });
+        },
+        highlightNodeByCard: function(card) {
+            var id = card.id;
+            var i, commit;
+            for(i = 0; i < global.gitgraph.commits.length; i++) {
+                commit = global.gitgraph.commits[i];
+                if(commit.detailId === id) {
+                    commit.activate();
+                } else {
+                    commit.deactivate();
+                }
+            }
         }
     };
 
     global.pathgraph = {
         init: function () {
             internal.init();
+        },
+        highlightNodeByCard: function(card) {
+            internal.highlightNodeByCard(card);
         }
     };
 }(window));

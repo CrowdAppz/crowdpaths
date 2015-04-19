@@ -50,6 +50,19 @@
             var position = scrollPercent;
 
             $("#scroll-progress").css('width', position + '%');
+
+            // scroll indicator on canvas
+            var cards = $(".card");
+            cards.each(function (index) {
+                var card = cards[index];
+                var top = $(this).offset().top - 140;
+                var bottom = top + $(this).outerHeight();
+
+                if (s >= top && s <= bottom) {
+                    pathgraph.highlightNodeByCard(card);
+                }
+            });
+
         });
     </script>
 </head>
@@ -104,7 +117,7 @@
             </div>
         </div>
 
-        <div class="card card-sizing" id="card-2">
+        <div class="card card-sizing" id="card-1">
             <div class="card-header">
                 <div class="card-header-avatar">
                     <img src="/img/coursera.png" class="material-avatar"></div>
@@ -192,7 +205,7 @@
             </div>
         </div>
 
-        <div class="card card-sizing" id="card-1">
+        <div class="card card-sizing" id="card-2">
             <div class="card-header">
                 <div class="card-header-avatar">
                     <img src="/img/udacity.png" class="material-avatar"></div>
@@ -221,7 +234,19 @@
                    class="card-footer-button">Open Course</a>
             </div>
         </div>
-        <div class="card card-sizing" id="card-3">
+
+        <ul class="collapsible popout card-sizing" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header active"><i class="mdi-image-filter-drama"></i>First</div>
+                <div class="collapsible-body">
+                    <p>Lorem ipsum dolor sit amet. <a target="_blank" href="" ng-click="showContent('material')"
+                                                      class="path-switch-button">SHOW CONTENT</a></p>
+
+                </div>
+            </li>
+        </ul>
+
+        <div class="card card-sizing path-material hidden" id="card-3">
             <div class="card-header">
                 <div class="card-header-avatar">
                     <img src="/img/youtube-play.png" class="material-avatar material-avatar-material"></div>
@@ -242,7 +267,8 @@
                 <p style="margin-top: 10px" class="card-content-text">A material metaphor is the unifying theory of a
                     rationalized space and a system of motion. The material is grounded in tactile reality, inspired by
                     the study of paper and ink, yet technologically advanced and open to imagination and magic. More
-                    Information on the <a href="http://www.google.com/design/spec/material-design/introduction.html">Material Design Website</a></p>
+                    Information on the <a href="http://www.google.com/design/spec/material-design/introduction.html">Material
+                        Design Website</a></p>
             </div>
 
             <div class="card-action">
@@ -254,7 +280,7 @@
             </div>
         </div>
 
-        <div class="card card-sizing" id="card-3">
+        <div class="card card-sizing" id="card-4">
             <div class="card-header">
                 <div class="card-header-avatar">
                     <img src="/img/android.png" class="material-avatar material-avatar-material"></div>
@@ -333,8 +359,7 @@
             </div>
         </div>
 
-
-        <div class="card card-sizing" id="card-1">
+        <div class="card card-sizing" id="card-5">
             <div class="card-header">
                 <div class="card-header-avatar">
                     <img src="/img/file-pdf.png" class="material-avatar material-avatar-games"></div>
@@ -346,14 +371,21 @@
 
             <div class="card-content">
                 <img src="/img/game-beginner.jpg" class="card-content-img"/>
-                <p class="card-content-text">Android Game Development Made Easy. If you've always wanted to make Android games but didn't know where to start, this book is for you. Whether you are an absolute beginner with no programming experience or an experienced Java developer wanting to get started with game development, this comprehensive book will help you accomplish your goals and teach you how to build your own games from scratch-no game engines needed. In this beginner-friendly guide, you will find step-by-step approaches designed to help you learn one fundamental concept at a time </p>
+
+                <p class="card-content-text">Android Game Development Made Easy. If you've always wanted to make Android
+                    games but didn't know where to start, this book is for you. Whether you are an absolute beginner
+                    with no programming experience or an experienced Java developer wanting to get started with game
+                    development, this comprehensive book will help you accomplish your goals and teach you how to build
+                    your own games from scratch-no game engines needed. In this beginner-friendly guide, you will find
+                    step-by-step approaches designed to help you learn one fundamental concept at a time </p>
             </div>
             <div class="card-action">
                 <p>
                     <input type="checkbox" id="card-action-complete" checked="checked"/>
                     <label class="card-action-complete-label" for="card-action-complete">Completed</label>
                 </p>
-                <a target="_blank" href="http://www.pdfiles.com/pdf/files/English/Android/Learning_Android_Game_Programming.pdf"
+                <a target="_blank"
+                   href="http://www.pdfiles.com/pdf/files/English/Android/Learning_Android_Game_Programming.pdf"
                    class="card-footer-button">Open PDF</a>
             </div>
         </div>

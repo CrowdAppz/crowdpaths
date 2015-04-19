@@ -103,11 +103,16 @@
                 <!--<span class="statistics-item"><i class="statistics-icon mdi-action-stars"></i><span-->
                 <!--class="statistics-text">{{::pathRating}}</span></span>-->
                 <span class="starrating-wrapper">
-                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"></span>
-                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate white-text"></span>
+                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"
+                          ng-class="{'grey-text': c.rating <= '0'}"></span>
+                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"
+                          ng-class="{'grey-text': c.rating <= '1'}"></span>
+                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"
+                          ng-class="{'grey-text': c.rating <= '2'}"></span>
+                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"
+                          ng-class="{'grey-text': c.rating <= '3'}"></span>
+                    <span class="starrating statistics-icon startpage-statistics-icon mdi-action-star-rate"
+                          ng-class="{'grey-text': c.rating <= '4'}"></span>
                 </span>
 
                 <div class="statistics-card-description">{{c.shortDescription}}</div>

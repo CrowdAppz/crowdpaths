@@ -54,9 +54,9 @@ angular.module('crowdpaths', [])
                 "durationTime": "15h 00m",
                 "usersCompleted": "6492",
                 "numberAlternativePaths": "2",
-                "shortDescription": "Winter is coming! You know nothing about skiing." +
-                "You either win the game of skies, or you fall. Learn everything " +
-                "from A to Z about skiing, and be called the King of the Hill, Mr. Snow!",
+                "shortDescription": "Winter is coming! You know nothing about skiing" +
+                " and you either win the game of skies, or you fall. Learn everything " +
+                "from A to Z about skiing, and be called the King of the North, Mr. Snow!",
                 "imgSrc": "img/ski.png",
                 "rating": "5"
             },

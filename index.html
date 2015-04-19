@@ -180,7 +180,8 @@
 
         <ul class="collapsible popout card-sizing" data-collapsible="accordion">
             <li>
-                <div class="collapsible-header active"><img class="mdi-image-filter-drama alternate-path-header-icon" src="img/materialdesign.png"></img>Excursion: Materialize
+                <div class="collapsible-header active"><img class="mdi-image-filter-drama alternate-path-header-icon"
+                                                            src="img/materialdesign.png"></img>Excursion: Materialize
                 </div>
                 <div class="collapsible-body">
                     <p>Learn more about the new design language of Android: Material Design<a target="_blank" href=""
@@ -283,12 +284,23 @@
         </div>
         <ul class="collapsible popout card-sizing" data-collapsible="accordion">
             <li>
-                <div class="collapsible-header active"><i class="mdi-image-filter-drama"></i>First</div>
-                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                <div class="collapsible-header active"><i class="mdi-action-list"></i>Build: Productivity App
+                </div>
+                <div class="collapsible-body"><p>Your first app will help you with your productivity: a note
+                    app.
+                    <a target="_blank" href=""
+                       id="showProductivityButton"
+                       ng-click="showContent('productivity', 'showProductivityButton')"
+                       class="path-switch-button">SHOW CONTENT</a>
+                </p></div>
             </li>
             <li>
-                <div class="collapsible-header"><i class="mdi-maps-place"></i>Second</div>
-                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                <div class="collapsible-header"><i class="mdi-av-games"></i>Build: Gaming App</div>
+                <div class="collapsible-body"><p>Your first app will be a small, nifty game!
+                    <a target="_blank" href=""
+                       id="showGamingButton"
+                       ng-click="showContent('productivity', 'showGamingButton')"
+                       class="path-switch-button">SHOW CONTENT</a></p></div>
             </li>
         </ul>
     </div>

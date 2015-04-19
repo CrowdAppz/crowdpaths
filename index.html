@@ -57,7 +57,6 @@
                 var card = cards[index];
                 var top = $(this).offset().top - 140;
                 var bottom = top + $(this).outerHeight();
-
                 if (s >= top && s <= bottom) {
                     pathgraph.highlightNodeByCard(card);
                 }

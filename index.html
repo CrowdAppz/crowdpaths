@@ -177,7 +177,19 @@
                    class="card-footer-button">Open Course</a>
             </div>
         </div>
-        <div class="card card-sizing" id="card-3">
+
+        <ul class="collapsible popout card-sizing" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header active"><i class="mdi-image-filter-drama"></i>First</div>
+                <div class="collapsible-body">
+                    <p>Lorem ipsum dolor sit amet. <a target="_blank" href="" ng-click="showContent('material')"
+                                                      class="path-switch-button">SHOW CONTENT</a></p>
+
+                </div>
+            </li>
+        </ul>
+
+        <div class="card card-sizing path-material hidden" id="card-3">
             <div class="card-header">
                 <div class="card-header-avatar">
                     <img src="/img/youtube-play.png" class="material-avatar"></div>

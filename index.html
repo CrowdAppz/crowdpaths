@@ -59,7 +59,7 @@
                 var bottom = top + $(this).outerHeight();
 
                 if (s >= top && s <= bottom) {
-                    console.log("card: ", card);
+                    pathgraph.highlightNodeByCard(card);
                 }
             });
 

@@ -34,7 +34,7 @@
                 dotSize: 18,
                 message: "Building your first Hello World App",
                 detailId: "card-2",
-                image: "img/android.png",
+                image: "img/vogella.png",
                 messageDisplay: true,
                 dotColor: primaryColor,
                 dotStrokeColor: primaryColor,
@@ -43,7 +43,7 @@
                 dotSize: 18,
                 message: "Activity Lifecycle - Google IO",
                 detailId: "card-3",
-                image: "img/presentation.png",
+                image: "img/youtube-play.png",
                 messageDisplay: true,
                 dotColor: primaryColor,
                 dotStrokeColor: primaryColor,
@@ -72,22 +72,22 @@
                 messageDisplay: true,
                 image: "img/android.png"
             });
-            design.merge(master, {
+            design.merge(master,{
                 dotSize: 18,
-                message: "Android Debugging",
+                message: "Android Testing",
                 detailId: "card-7",
+                image: "img/presentation.png",
                 messageDisplay: true,
-                image: "img/vogella.png",
                 dotColor: primaryColor,
                 dotStrokeColor: primaryColor,
                 color: primaryColor
             });
-            master.commit({
+            master.commit( {
                 dotSize: 18,
-                message: "Android Testing",
+                message: "Android Debugging",
                 detailId: "card-8",
-                image: "img/presentation.png",
                 messageDisplay: true,
+                image: "img/vogella.png",
                 dotColor: primaryColor,
                 dotStrokeColor: primaryColor,
                 color: primaryColor
@@ -114,7 +114,7 @@
                 dotSize: 18,
                 message: "Install and Use Android Play Game Services",
                 detailId: "card-10",
-                image: "img/gamepad-variant.png",
+                image: "img/presentation.png",
                 messageDisplay: true
             });
             master.commit({
